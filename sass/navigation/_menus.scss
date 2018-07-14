@@ -1,0 +1,102 @@
+// NOTE: HEADER Navigation styling
+
+.site-header {
+  margin: 0 auto;
+  padding: 1.7em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // background: $color__background-sticky-nav;
+
+  // NOTE: fixed navigation
+  position: fixed;
+  top: 0;
+  left: 0;
+
+
+
+  .main-navigation {
+    text-transform: uppercase;
+
+    li {
+      display: inline-block;
+      margin-left: 1.5em;
+      padding: 0.5em;
+
+
+    }
+
+    a {
+      color: $color__link-menu;
+    }
+  }
+
+  .site-branding {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color__logo-tagline;
+
+    display: flex;
+    align-items: center;
+
+    .site-title {
+      margin-left: 1em;
+    }
+  }
+}
+.scrolled {
+  background: $color__background-sticky-nav;
+  transition: all .5 linear;
+}
+
+.highlight {
+  @include highlight-btn();
+}
+
+// NOTE: FOOTER Navigation Styling
+footer {
+  clear: both;
+  color: $color__link-menu;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  @include commonWidth();
+  padding-top: 6em;
+  padding-bottom: 3em;
+
+  .half-layout {
+    grid-column: 1 / -1;
+
+    &:after {
+      content:'';
+      display: inline-block;
+      width: 100%;
+      border-bottom: 1px solid $color__footer-divider;
+      grid-column: 1 / -1;
+      padding-top: 2em;
+    }
+  }
+
+  .site-info {
+    justify-self: start;
+  }
+
+  .social-navigation{
+    justify-self: end;
+    li {
+      display: inline-block;
+      margin-left: 2em;
+      font-size: 1.2em;
+
+      a {
+        color: $color__button-social;
+        transition: all 1s;
+
+        &:hover {
+          color: $color__link-hover;
+          transition: all 1s;
+        }
+      }
+    }
+  }
+}

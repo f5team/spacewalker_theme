@@ -1,0 +1,14 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-family: $font__title_nav;
+}
+
+.title-header-big {
+	color: $color__text-title-big;
+	text-transform: uppercase;
+}
+
+.title-header-small {
+	color: $color__text-title-small;
+	text-transform: uppercase;
+}

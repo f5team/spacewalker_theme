@@ -1,0 +1,105 @@
+// NOTE: Styling 2-column layout and 3-column layout for front page
+// QUESTION: there are also layout in percentage in variables-site/structure, but I use grid here
+
+.primary section {
+  min-height: 100vh;
+  @include commonWidth();
+  // NOTE: max-width for the whole contain
+  max-width: 1500px;
+
+
+  button {
+    margin-right: 1.2em;
+  }
+}
+
+// NOTE: max-width for the title
+.title-header-small,
+.title-header-big {
+  max-width: 70%;
+}
+
+.half-layout {
+  @include two-column-layout();
+  padding-bottom: 2em;
+
+
+
+  .left-content {
+    justify-self: start;
+  }
+
+  .right-content {
+    justify-self: end;
+  }
+}
+
+.third-layout {
+  @include three-column-layout();
+
+  .title-header-small,
+  .title-header-big
+  {
+    justify-self: center;
+    grid-column: 1 / -1;
+  }
+  .title-header-small {
+    align-self: end;
+  }
+
+  .block {
+    text-align: center;
+  }
+
+  .block {
+    img {
+      width: 70%;
+      height: auto;
+      object-fit: cover;
+    }
+    p {
+      margin: 2em auto;
+      width: 70%;
+    }
+  }
+}
+
+// NOTE: another layout of 3-column layout
+.extend-third-layout {
+  @include three-column-layout();
+
+  .title-header-small,
+  .title-header-big
+  {
+    justify-self: center;
+    grid-column: 1 / -1;
+  }
+  .title-header-small {
+    align-self: end;
+  }
+
+  .block-1 {
+    justify-self: end;
+  }
+  .block-3 {
+    justify-self: start;
+  }
+}
+
+.seperator{
+  width: 100%;
+  height: 10px;
+  // background: yellow;
+  @include divider-skew-left();
+
+  &:nth-of-type(2) {
+    @include divider-skew-right();
+  }
+}
+
+// NOTE: planet animation
+#earth {
+  transform: translatey(0px);
+	animation: float 3s ease-in-out infinite, rotation 20s ease-in-out infinite;
+  animation-timing-function: linear;
+}

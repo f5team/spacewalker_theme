@@ -1,0 +1,139 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+
+
+
+@mixin divider-skew-left() {
+
+  -moz-box-shadow:0px 10px 20px 0 black;
+  -webkit-box-shadow:0px 10px 20px 0 black;
+  box-shadow:0px 10px 20px 0 black;
+
+
+  -ms-transform: skewY(4deg);
+  -webkit-transform: skewY(4deg);
+  transform: skewY(4deg);
+
+  z-index: 99;
+}
+
+@mixin divider-skew-right() {
+  -moz-box-shadow:0px 10px 20px 0 black;
+  -webkit-box-shadow:0px 10px 20px 0 black;
+  box-shadow:0px 10px 20px 0 black;
+
+
+  -ms-transform: skewY(-4deg);
+  -webkit-transform: skewY(-4deg);
+  transform: skewY(-4deg);
+
+  z-index: 99;
+}
+
+
+// Styling all radius buttons
+@mixin border-btn() {
+  color: $color__border-button;
+  border-radius: 10px;
+  background: none;
+  padding: .7em 1.5em;
+  transition: all .5s;
+  text-transform: uppercase;
+  border: 1px solid $color__border-button;
+  &:hover {
+    border-color: rgba(255,255,255,0);
+    background: rgba(255,255,255,.3);
+    transition: all .5s;
+  }
+}
+
+// Styling highlight red buttons
+@mixin highlight-btn() {
+  background-color: $color__highlight-button;
+  transition: all .5s;
+  border-radius: 10px;
+  padding: .7em 1.5em;
+
+  &:hover {
+    background: $color__highlight-button-hover;
+    transition: all .5s;
+  }
+}
+
+// Width and center content for section and FOOTER
+@mixin commonWidth() {
+  margin: 0 auto;
+  padding: 0 5em 0 5em;
+}
+
+// 3-column layout
+@mixin three-column-layout() {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-items: center;
+}
+
+// 2-column layout
+@mixin two-column-layout(){
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+  align-items: center;
+  justify-items: space-between;
+}
+
+// Floating animation
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+// Rotate animation
+@-webkit-keyframes rotation {
+		0%{
+				-webkit-transform: rotate(0deg);
+		}
+		50% {
+				-webkit-transform: rotate(10deg);
+		}
+    100%{
+				-webkit-transform: rotate(0deg);
+		}
+}
