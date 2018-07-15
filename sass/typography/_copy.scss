@@ -48,3 +48,32 @@ mark, ins {
 big {
 	font-size: 125%;
 }
+
+// NOTE: Logo text style
+.site-title {
+  a, a:hover, a:visited {
+    font-family: $font__title_nav;
+    color: $color__background-screen;
+    font-size: 1.25em;
+  }
+}
+
+// Font Awesome
+a[href*='instagram']:before, a[href*='twitter']:before , a[href*='youtube']:before {
+  font-family: "Font Awesome 5 Brands";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+a[href*='instagram']:before {
+  content: "\f16d";
+}
+a[href*='twitter']:before {
+  content: "\f099";
+}
+a[href*='youtube']:before {
+  content: "\f167";
+}

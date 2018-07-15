@@ -33,9 +33,9 @@
 
 @mixin divider-skew-left() {
 
-  -moz-box-shadow:0px 10px 20px 0 black;
-  -webkit-box-shadow:0px 10px 20px 0 black;
-  box-shadow:0px 10px 20px 0 black;
+  -moz-box-shadow:0px 12px 15px black;
+  -webkit-box-shadow:0px 12px 15px black;
+  box-shadow:0px 12px 15px black;
 
 
   -ms-transform: skewY(4deg);
@@ -46,9 +46,9 @@
 }
 
 @mixin divider-skew-right() {
-  -moz-box-shadow:0px 10px 20px 0 black;
-  -webkit-box-shadow:0px 10px 20px 0 black;
-  box-shadow:0px 10px 20px 0 black;
+  -moz-box-shadow:0px 12px 15px black;
+  -webkit-box-shadow:0px 12px 15px black;
+  box-shadow:0px 12px 15px black;
 
 
   -ms-transform: skewY(-4deg);
@@ -62,7 +62,7 @@
 // Styling all radius buttons
 @mixin border-btn() {
   color: $color__border-button;
-  border-radius: 10px;
+  border-radius: 5px;
   background: none;
   padding: .7em 1.5em;
   transition: all .5s;
@@ -79,8 +79,9 @@
 @mixin highlight-btn() {
   background-color: $color__highlight-button;
   transition: all .5s;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: .7em 1.5em;
+	font-weight: bold;
 
   &:hover {
     background: $color__highlight-button-hover;
@@ -90,43 +91,57 @@
 
 // Width and center content for section and FOOTER
 @mixin commonWidth() {
-  margin: 0 auto;
+  margin: 2em auto;
   padding: 0 5em 0 5em;
 }
 
 // 3-column layout
 @mixin three-column-layout() {
-  width: 100%;
-  display: grid;
+  // width: 100%;
+  // display: grid;
   grid-template-columns: repeat(3,1fr);
   justify-items: center;
+	align-items: none;
+	grid-gap: 0;
 }
 
 // 2-column layout
 @mixin two-column-layout(){
+  // width: 100%;
+  // display: grid;
+  grid-template-columns: repeat(2,1fr);
+  // justify-content: center;
+  align-items: center;
+  // justify-items: space-between;
+	grid-gap: 0;
+
+}
+
+// 1-column layout
+@mixin one-column-layout(){
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: 1fr;
   justify-content: center;
-  align-items: center;
-  justify-items: space-between;
+  // align-items: center;
+	// grid-gap: 1.25em;
 }
 
 // Floating animation
-@keyframes float {
+@-webkit-keyframes float {
 	0% {
-		transform: translatey(0px);
+		-webkit-transform: translateY(0px);
 	}
 	50% {
-		transform: translatey(-20px);
+		-webkit-transform: translateY(-20px);
 	}
 	100% {
-		transform: translatey(0px);
+		-webkit-transform: translateY(0px);
 	}
 }
 
 // Rotate animation
-@-webkit-keyframes rotation {
+@-webkit-keyframes rotating {
 		0%{
 				-webkit-transform: rotate(0deg);
 		}

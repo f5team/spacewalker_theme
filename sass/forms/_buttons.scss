@@ -10,6 +10,7 @@ input[type="submit"] {
 	@include font-size(0.75);
 	line-height: 1;
 	padding: .6em 1em .4em;
+	font-family: $font__title_nav;
 
 	&:hover {
 		border-color: $color__border-button-hover;
@@ -24,6 +25,7 @@ input[type="submit"] {
 button {
   @include border-btn();
 
-  text-transform: capitalize;
+  text-transform: uppercase;
+	letter-spacing: 2px;
 
 }

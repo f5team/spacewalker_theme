@@ -44,7 +44,8 @@ if ( ! function_exists( 'spacewalker_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'spacewalker' ),
+			'primary-menu' => esc_html__( 'Primary', 'spacewalker' ),
+			'social-menu' => esc_html__( 'Social', 'spacewalker' )
 		) );
 
 		/*
@@ -67,6 +68,7 @@ if ( ! function_exists( 'spacewalker_setup' ) ) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
+
 
 		/**
 		 * Add support for core custom logo.
@@ -122,9 +124,19 @@ add_action( 'widgets_init', 'spacewalker_widgets_init' );
 function spacewalker_scripts() {
 	wp_enqueue_style( 'spacewalker-style', get_stylesheet_uri() );
 
+	// Google font
+	wp_enqueue_style( 'spacewalker-google-font', 'https://fonts.googleapis.com/css?family=Montserrat:300|Oswald:300' );
+
+	// Font Awesome
+	wp_enqueue_style( 'spacewalker-awesome-font', 'https://use.fontawesome.com/releases/v5.1.0/css/all.css' );
+
 	wp_enqueue_script( 'spacewalker-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'spacewalker-navscroll', get_template_directory_uri() . '/js/navscroll.js', array('jquery'), '20151215', true );
+
 	wp_enqueue_script( 'spacewalker-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -159,3 +171,27 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Dynamic Copyright Date
+ */
+function comicpress_copyright() {
+	global $wpdb;
+	$copyright_dates = $wpdb->get_results("
+	SELECT
+	YEAR(min(post_date_gmt)) AS firstdate,
+	YEAR(max(post_date_gmt)) AS lastdate
+	FROM
+	$wpdb->posts
+	WHERE
+	post_status = 'publish'
+	");
+	$output = '';
+	if($copyright_dates) {
+	$copyright = "&copy; " . $copyright_dates[0]->firstdate;
+	if($copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate) {
+	$copyright .= '-' . $copyright_dates[0]->lastdate;
+	}
+	$output = $copyright;
+	}
+	return $output;
+}

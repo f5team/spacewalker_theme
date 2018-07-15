@@ -1,0 +1,13 @@
+.site-content section {
+  min-height: 100vh;
+  @include commonWidth();
+
+  // NOTE: max-width for the whole contain
+  max-width: 1500px;
+
+
+  button {
+    margin-right: 1.2em;
+  }
+
+}
