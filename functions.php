@@ -195,3 +195,19 @@ function comicpress_copyright() {
 	}
 	return $output;
 }
+
+function wpb_imagelink_setup() {
+    $image_set = get_option( 'image_default_link_type' );
+
+    if ($image_set !== 'none') {
+        update_option('image_default_link_type', 'none');
+    }
+}
+add_action('admin_init', 'wpb_imagelink_setup', 10);
+
+function filter_ptags_on_images($content) {
+    $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+    return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+}
+add_filter('acf_the_content', 'filter_ptags_on_images');
+add_filter('the_content', 'filter_ptags_on_images');
