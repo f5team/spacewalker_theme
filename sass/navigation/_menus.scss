@@ -2,7 +2,7 @@
 
 .site-header {
   margin: 1.25em auto;
-  padding: 1.7em;
+  padding: 2em 2em 1em 2em;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -30,7 +30,12 @@
     }
 
     a {
+      line-height: 3em;
       color: $color__link-menu;
+      &:hover {
+        color: $color__link-hover;
+        transition: all 1s;
+      }
     }
   }
 
@@ -107,21 +112,20 @@
   justify-items: center;
   @include commonWidth();
   padding-top: 6em;
-  padding-bottom: 3em;
 
-  .half-layout {
+  #footer {
     grid-column: 1 / -1;
-    margin-bottom: 2em;
+    width: 100%;
+    border-bottom: 1px solid $color__text-body;
+    padding-bottom: 2em;
 
-    &:after {
-      content:'';
-      display: inline-block;
-      width: 100%;
-      border-bottom: 1px solid $color__footer-divider;
-      grid-column: 1 / -1;
-      padding-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .entry-header {
+      display: none;
     }
-
   }
 
   .site-info {

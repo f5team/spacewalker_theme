@@ -59,13 +59,17 @@ big {
 }
 
 // Font Awesome
-a[href*='instagram']:before, a[href*='twitter']:before , a[href*='youtube']:before {
+a[href*='instagram']:before, a[href*='twitter']:before , a[href*='youtube']:before , a[href*='facebook']:before,
+a[href*='apple']:after , a[href*='android']:after
+{
   font-family: "Font Awesome 5 Brands";
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+
+
 }
 
 a[href*='instagram']:before {
@@ -76,4 +80,15 @@ a[href*='twitter']:before {
 }
 a[href*='youtube']:before {
   content: "\f167";
+}
+a[href*='facebook']:before {
+  content: "\f39e";
+}
+a[href*='apple']:after {
+  content: "\f179";
+  padding-left: .7em;
+}
+a[href*='android']:after {
+  content: "\f17b";
+  padding-left: .7em;
 }

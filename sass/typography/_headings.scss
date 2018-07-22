@@ -1,34 +1,29 @@
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
-	font-family: $font__title_nav;
-}
+html {font-size: 1em;font-family: $font__main}
+
+p {margin-bottom: 1.3em;}
 
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;
   font-weight: inherit;
   line-height: 1.2;
+	font-family: $font__title_nav;
 }
 
 h1 {
   margin-top: 0;
-  font-size: 3.157em;
-}
-
-h2 {font-size: 2.369em;}
-
-h3 {font-size: 1.777em;}
-
-h4 {font-size: 1.333em;}
-
-.title-header-big {
+  font-size: 2.441em;
 	color: $color__text-title-big;
 	text-transform: uppercase;
 }
 
-.title-header-small {
+h2 {
+	font-size: 1em;
 	color: $color__text-title-small;
 	text-transform: uppercase;
-
 }
 
-.radius-btn {font-size: 1.2em;}
+h3 {font-size: 1.563em;}
+
+h4 {font-size: 1.25em;}
+
+small, .font_small {font-size: 0.8em;}

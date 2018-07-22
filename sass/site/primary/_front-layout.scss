@@ -117,23 +117,14 @@
 }
 
 // NOTE: max-width for the title media query
-@media screen and (min-width:600px){
-  .title-header-small,
-  .title-header-big {
-    max-width: 70%;
-  }
-}
+// @media screen and (min-width:600px){
+//   .title-header-small,
+//   .title-header-big {
+//     max-width: 70%;
+//   }
+// }
 
-.seperator{
-  width: 100%;
-  height: 10px;
-  // background: yellow;
-  @include divider-skew-left();
 
-  &:nth-of-type(2) {
-    @include divider-skew-right();
-  }
-}
 
 // NOTE: This is the styling for buttons ios and android in front-page
 .front-cover p {
