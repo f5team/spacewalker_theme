@@ -62,7 +62,7 @@
     // flex-grow: 1;
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $size__medium-screen) {
 
     position: fixed;
 
@@ -86,7 +86,7 @@
   @include highlight-btn();
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: $size__medium-screen){
   .site-header {
     flex-wrap: nowrap;
 
@@ -104,26 +104,19 @@
 
 
 // NOTE: FOOTER Navigation Styling
-#colophon {
-  clear: both;
+.site-footer {
   color: $color__link-menu;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  justify-items: center;
   @include commonWidth();
-  padding-top: 6em;
+
+
 
   #footer {
-    grid-column: 1 / -1;
+
     width: 100%;
     border-bottom: 1px solid $color__text-body;
     padding-bottom: 2em;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    .entry-header {
+    .post-thumbnail {
       display: none;
     }
   }
@@ -131,18 +124,13 @@
   .site-info {
     text-align: center;
     margin-bottom: 1em;
-    grid-column: 1/-1;
-  }
-
-  #site-navigation {
-    grid-column: 1/-1;
   }
 
   #social-menu{
     li {
       display: inline-block;
-      margin: 0 1em 0 1em;
       font-size: 1.2em;
+      margin: 0 1em 0 1em;
 
       a {
         color: $color__button-social;
@@ -156,7 +144,37 @@
     }
   }
 
-  @media screen and (min-width: 600px) {
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+
+    #footer {
+      grid-column: 1 / -1;
+    }
+    .site-info {
+      grid-column: 1/-1;
+    }
+    #site-navigation {
+      grid-column: 1/-1;
+    }
+  }
+
+  @media screen and (min-width: $size__medium-screen) {
+
+    #footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      .post-thumbnail {
+        display: block;
+      }
+
+      .entry-content {
+        margin-left: 2em;
+      }
+    }
     .site-info {
       text-align: left;
       grid-column: 1;
@@ -167,5 +185,22 @@
       grid-column: 2;
       justify-self: end;
     }
+
+    #social-menu{
+      li {
+        margin: 0 0 0 1em;
+
+        a {
+          color: $color__button-social;
+          transition: all 1s;
+
+          &:hover {
+            color: $color__link-hover;
+            transition: all 1s;
+          }
+        }
+      }
+    }
   }
+
 }

@@ -1,21 +1,14 @@
 .site-content {
 
 
-  // NOTE: max-width for the whole contain
   article {
-
-
+    // NOTE: max-width for the whole contain
     @include commonWidth();
 
     .post-thumbnail {
       text-align: center;
       width: 100%;
       margin: auto;
-    }
-
-    .entry-content {
-      width: 80vw;
-
     }
 
     a {
@@ -31,34 +24,46 @@
 
   }
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: $size__medium-screen) {
     article {
       padding-top: 5vh;
       padding-bottom: 5vh;
       min-height: 50vh;
+      margin: auto;
+    }
+    .entry-content {
+      width: 100%;
     }
   }
 
-  @media screen and (min-width: 1300px) {
+  @media screen and (min-width: $size__large-screen) {
     article {
       min-height: 100vh;
       max-width: 1500px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
 
-      &:nth-of-type(2) {
-        flex-direction: row-reverse;
-        .post-thumbnail {
-          text-align: right;
-        }
+      .entry-content {
+        margin: auto;
       }
+
       .post-thumbnail {
         width: 100%;
       }
       figcaption {
         margin: auto;
         width: 90%;
+      }
+
+      @supports (display: flex) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:nth-of-type(2) {
+          flex-direction: row-reverse;
+          .post-thumbnail {
+            text-align: right;
+          }
+        }
       }
     }
   }
@@ -82,7 +87,7 @@
     }
   }
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: $size__large-screen) {
 
     a {
       display: inline-block;
@@ -93,9 +98,16 @@
 
 #section2 {
   .post-thumbnail {
-    transform: translatey(0px);
-  	animation: float-object 3s ease-in-out infinite;
-    animation-timing-function: linear;
+    img {
+      max-width: 70%;
+      height: auto;
+      border-radius: 50%;
+      animation: pulse-object 2s infinite;
+    }
+
+    // transform: translatey(0px);
+  	// animation: float-object 3s ease-in-out infinite;
+    // animation-timing-function: linear;
   }
 }
 
@@ -103,15 +115,35 @@
   h1 , h2 {
     text-align: center;
   }
-  @media screen and (min-width: 1000px) {
+
+  @media screen and (min-width: $size__large-screen) {
     #gallery-1 , #gallery-2{
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      grid-gap: 1.25em;
+
+      figure {
+        float: left;
+        width: 33.33%;
+      }
 
       img {
         max-height: 70vh;
         width: auto;
+      }
+
+      &:after {
+        content: '';
+        clear: both;
+      }
+
+      @supports (display: grid) {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 1.25em;
+
+        figure {
+          float: none;
+          width: 100%;
+        }
+
       }
     }
   }

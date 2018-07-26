@@ -33,9 +33,9 @@
 
 @mixin divider-skew-left() {
 
-  -moz-box-shadow:0px 14px 15px black;
-  -webkit-box-shadow:0px 14px 15px black;
-  box-shadow:0px 14px 15px black;
+  -moz-box-shadow:-5px 14px 15px black;
+  -webkit-box-shadow:-5px 14px 15px black;
+  box-shadow:-5px 14px 15px black;
 
 
   -ms-transform: skewY(4deg);
@@ -46,9 +46,9 @@
 }
 
 @mixin divider-skew-right() {
-  -moz-box-shadow:0px 14px 15px black;
-  -webkit-box-shadow:0px 14px 15px black;
-  box-shadow:0px 14px 15px black;
+  -moz-box-shadow:-5px 14px 15px black;
+  -webkit-box-shadow:-5px 14px 15px black;
+  box-shadow:-5px 14px 15px black;
 
 
   -ms-transform: skewY(-4deg);
@@ -79,13 +79,15 @@
 // Styling highlight red buttons
 @mixin highlight-btn() {
   background-color: $color__highlight-button;
+	border: 1px solid $color__highlight-button;
   transition: all .5s;
   border-radius: 5px;
   padding: .2em 1.5em;
 	font-weight: bold;
 
   &:hover {
-    background: $color__highlight-button-hover;
+		color: $color__link-hover;
+    background: none;
     transition: all .5s;
   }
 }
@@ -94,38 +96,6 @@
 @mixin commonWidth() {
   margin: 3em auto;
   padding: 0 5em 0 5em;
-}
-
-// 3-column layout
-@mixin three-column-layout() {
-  // width: 100%;
-  // display: grid;
-  grid-template-columns: repeat(3,1fr);
-  justify-items: center;
-	align-items: none;
-	grid-gap: 0;
-}
-
-// 2-column layout
-@mixin two-column-layout(){
-  // width: 100%;
-  // display: grid;
-  grid-template-columns: repeat(2,1fr);
-  // justify-content: center;
-  align-items: center;
-  // justify-items: space-between;
-	grid-gap: 0;
-
-}
-
-// 1-column layout
-@mixin one-column-layout(){
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  // align-items: center;
-	// grid-gap: 1.25em;
 }
 
 // NOTE: animation
@@ -153,4 +123,20 @@
     100%{
 				-webkit-transform: rotate(0deg);
 		}
+}
+
+// Pulse animation
+@-webkit-keyframes pulse-object {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(49,26,84, 0.4);
+    box-shadow: 0 0 0 0 rgba(49,26,84, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 100px rgba(49,26,84, 0);
+      box-shadow: 0 0 0 100px rgba(49,26,84, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(49,26,84, 0);
+      box-shadow: 0 0 0 0 rgba(49,26,84, 0);
+	}
 }
