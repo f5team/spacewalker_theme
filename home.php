@@ -18,42 +18,108 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
-		if ( have_posts() ) :
+<!-- Blog Loop -->
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+			<header>
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				<div class="blog-entry">
+						<h1>text</h1>
+				</div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+			</header>
 
-			endwhile;
+					<div class="blogsection">
 
-			the_posts_navigation();
+						<div class="section-title">
+							<h2>Awesome features</h2>
+							<h3>New features</h3>
+						</div>
 
-		else :
+					<?php $features_query = new WP_Query( array(
+															'category_name' => 'features',
+															'posts_per_page' => '3',
+															'orderby' => 'rand',
+													) );
 
-			get_template_part( 'template-parts/content', 'none' );
+								if ( $features_query->have_posts() ) :
 
-		endif;
-		?>
+								/* Start the Loop */
+								while ( $features_query->have_posts() ) : $features_query->the_post();
+										get_template_part( 'template-parts/content', 'excerpt' );
+								endwhile;
+
+								// the_posts_navigation();
+
+									wp_reset_postdata();
+						else :
+								get_template_part( 'template-parts/content', 'none' );
+						endif; ?>
+
+					</div> <!-- end features loop -->
+
+					<div class="blogsection">
+
+						<div class="section-title">
+							<h2>Challenge your friends</h2>
+							<h3>New Planet Unlock</h3>
+						</div>
+
+						<?php $planet_query = new WP_Query( array(
+																'category_name' => 'planet',
+																'posts_per_page' => '3',
+																'orderby' => 'rand',
+														) );
+
+									if ( $planet_query->have_posts() ) :
+
+									/* Start the Loop */
+									while ( $planet_query->have_posts() ) : $planet_query->the_post();
+											get_template_part( 'template-parts/content', 'excerpt' );
+									endwhile;
+
+									// the_posts_navigation();
+
+										wp_reset_postdata();
+							else :
+									get_template_part( 'template-parts/content', 'none' );
+							endif; ?>
+
+					</div> <!-- end planet loop -->
+
+					<div class="blogsection">
+
+
+											<div class="section-title">
+												<h2>Get Healthy</h2>
+												<h3>Healthy Tips</h3>
+											</div>
+
+					<?php $health_query = new WP_Query( array(
+															'category_name' => 'health',
+															'posts_per_page' => '3',
+															'orderby' => 'rand',
+													) );
+
+								if ( $health_query->have_posts() ) :
+
+								/* Start the Loop */
+								while ( $health_query->have_posts() ) : $health_query->the_post();
+										get_template_part( 'template-parts/content', 'excerpt' );
+								endwhile;
+
+								// the_posts_navigation();
+
+									wp_reset_postdata();
+						else :
+								get_template_part( 'template-parts/content', 'none' );
+						endif; ?>
+
+					</div> <!-- end health loop -->
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
 get_sidebar();
-get_footer();
+get_footer(); ?>
