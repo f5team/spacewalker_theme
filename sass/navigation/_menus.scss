@@ -1,24 +1,42 @@
 // NOTE: HEADER Navigation styling
-
 .site-header {
-  margin: 1.25em auto;
-  padding: 2em 2em 1em 2em;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  // background: $color__background-sticky-nav;
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  position: sticky;
+  // background-color: $color__background-sticky-nav;
 
   // NOTE: fixed navigation
+  z-index: 999;
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 999;
+
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+}
+.wrapper-header {
+  @include commonWidth();
+  max-width: 1500px;
+  margin: 1.25em auto;
+  padding-top: 1em;
+  width: 100%;
+  height: auto;
+
   transition: all .5;
   -webkit-transition: all .5s;
 
+  .site-branding {
+    float: left;
+  }
+
 
   .main-navigation {
+    float:right;
 
     text-transform: uppercase;
 
@@ -58,13 +76,9 @@
     }
   }
 
-  .main-navigation {
-    // flex-grow: 1;
-  }
 
   @media screen and (min-width: $size__medium-screen) {
 
-    position: fixed;
 
     .site-branding {
       .custom-logo-link {
@@ -77,7 +91,7 @@
 
 
 .scrolled {
-  background: $color__background-sticky-nav;
+  background-color: $color__background-sticky-nav;
   transition: all .5;
   -webkit-transition: all .5s;
 }
@@ -86,21 +100,6 @@
   @include highlight-btn();
 }
 
-@media screen and (min-width: $size__medium-screen){
-  .site-header {
-    flex-wrap: nowrap;
-
-    margin: 0;
-
-    .site-branding {
-      flex-grow: 0;
-    }
-    .main-navigation {
-      flex-grow: 0;
-    }
-  }
-
-}
 
 
 // NOTE: FOOTER Navigation Styling
@@ -166,7 +165,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      
+
       .post-thumbnail {
         display: block;
       }
@@ -203,4 +202,24 @@
     }
   }
 
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+.main-navigation {
+  ul{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
 }

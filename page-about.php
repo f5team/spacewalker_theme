@@ -11,6 +11,17 @@
 
  	<div id="primary" class="content-area">
  		<main id="main" class="site-main">
+      <div class="banner-animation">
+        <div class="first-line-animation">We are ...</div>
+        <div class="second-line-animation">
+          <span>so ready for new projects</span>
+        </div>
+      </div>
+
+      <div class="page-title">
+        <h2>Our passionate members</h2>
+        <h1>Meet the team</h1>
+      </div>
 
       <?php
             $about_query = new WP_Query( array(
@@ -35,6 +46,8 @@
       ?>
 
  		</main><!-- #main -->
+    <div class ="seperator"></div>
+
  	</div><!-- #primary -->
 
  <?php
