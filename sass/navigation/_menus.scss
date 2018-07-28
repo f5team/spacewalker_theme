@@ -1,6 +1,6 @@
 // NOTE: HEADER Navigation styling
 .site-header {
-  width: 100vw;
+  width: 100%;
   height: auto;
   margin: auto;
   position: sticky;
@@ -8,10 +8,14 @@
 
   // NOTE: fixed navigation
   z-index: 999;
-  position: sticky;
   top: 0;
   left: 0;
 
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
 }
 .wrapper-header {
@@ -58,6 +62,7 @@
     font-weight: bold;
     text-transform: uppercase;
     color: $color__logo-tagline;
+    // flex-grow: 1;
 
 
     .custom-logo-link {
@@ -93,6 +98,7 @@
 
 
   @media screen and (min-width: $size__medium-screen) {
+
 
     .site-branding {
       .custom-logo-link {

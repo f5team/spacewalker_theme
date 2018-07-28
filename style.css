@@ -814,12 +814,11 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .site-header {
-  width: 100vw;
+  width: 100%;
   height: auto;
   margin: auto;
   position: sticky;
   z-index: 999;
-  position: sticky;
   top: 0;
   left: 0;
 }
