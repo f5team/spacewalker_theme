@@ -22,7 +22,7 @@
 .wrapper-header {
   @include commonWidth();
   max-width: 1500px;
-  margin: 1.25em auto;
+  margin: 0 auto 1.25em auto;
   padding-top: 1em;
   width: 100%;
   height: auto;
@@ -57,6 +57,8 @@
     }
   }
 
+
+
   .site-branding {
     font-weight: bold;
     text-transform: uppercase;
@@ -64,9 +66,6 @@
     // flex-grow: 1;
 
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     .custom-logo-link {
       display: none;
     }
@@ -74,7 +73,27 @@
     .site-title {
       margin-left: 1em;
     }
+
+
   }
+
+	@supports (display: flex){
+		.site-branding, .main-navigation{
+			float: none;
+		}
+
+		.wrapper-header, .site-branding{
+			display: flex;
+		}
+
+		.wrapper-header{
+			flex-direction: row;
+		}
+
+		.site-branding{
+			align-items: center;
+		}
+	}
 
 
   @media screen and (min-width: $size__medium-screen) {
