@@ -1,9 +1,10 @@
 .site-content {
-
+  padding-bottom: 2em;
 
   article {
     // NOTE: max-width for the whole contain
     @include commonWidth();
+    // padding-top: 2em;
 
     .post-thumbnail {
       text-align: center;
@@ -26,9 +27,9 @@
 
   @media screen and (min-width: $size__medium-screen) {
     article {
-      padding-top: 5vh;
-      padding-bottom: 5vh;
-      min-height: 50vh;
+      padding-top: 4em;
+      padding-bottom: 5em;
+      min-height: 70vh;
       margin: auto;
     }
     .entry-content {
@@ -58,7 +59,8 @@
         align-items: center;
         justify-content: space-between;
 
-        &:nth-of-type(2) {
+        // NOTE: reverse flex layout
+        &:nth-of-type(2n) {
           flex-direction: row-reverse;
           .post-thumbnail {
             text-align: right;
@@ -71,6 +73,7 @@
 }
 
 #section1 {
+  text-align: center;
   a {
     text-align: center;
     display: block;
@@ -78,45 +81,52 @@
 
   .post-thumbnail {
     transform: translatey(0px);
-  	animation: float-object 3s ease-in-out infinite;
+  	animation: floatobject 3s ease-in-out infinite;
     animation-timing-function: linear;
 
     img {
-    	animation: rotate-object 15s ease-in-out infinite;
+    	animation: rotateobject 15s ease-in-out infinite;
       animation-timing-function: linear;
     }
   }
 
-  @media screen and (min-width: $size__large-screen) {
-
+  @media screen and (min-width: $size__medium-screen) {
+    margin-top: 5em;
     a {
       display: inline-block;
       margin-right: 1em;
     }
   }
+
+  @media screen and (min-width: $size__large-screen) {
+    margin-top: 0;
+    text-align: left;
+  }
 }
 
 #section2 {
+  text-align: center;
   .post-thumbnail {
     img {
       max-width: 70%;
       height: auto;
       border-radius: 50%;
-      animation: pulse-object 2s infinite;
+      animation: pulseobject 2s infinite;
     }
+  }
 
-    // transform: translatey(0px);
-  	// animation: float-object 3s ease-in-out infinite;
-    // animation-timing-function: linear;
+  @media screen and (min-width: $size__large-screen) {
+    text-align: left;
   }
 }
+
 
 #section3 , #section4 {
   h1 , h2 {
     text-align: center;
   }
 
-  @media screen and (min-width: $size__large-screen) {
+  @media screen and (min-width: $size__medium-screen) {
     #gallery-1 , #gallery-2{
 
       figure {
@@ -127,11 +137,6 @@
       img {
         max-height: 70vh;
         width: auto;
-      }
-
-      &:after {
-        content: '';
-        clear: both;
       }
 
       @supports (display: grid) {

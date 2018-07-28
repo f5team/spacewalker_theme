@@ -1,4 +1,3 @@
-// sticky Navigation$(document).scroll(function () {
 jQuery(document).ready(function ($) {
   $(document).scroll(function () {
     var $nav = $(".site-header");
