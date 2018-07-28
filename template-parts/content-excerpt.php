@@ -16,25 +16,12 @@
 		<?php spacewalker_post_thumbnail(); ?>
 
 		<?php
-    the_title( '<h1 class="entry-title">', '</h1>' );
-
-		// if ( is_home() ) :
-		// 	the_title( '<h1 class="entry-title">', '</h1>' );
-    //                                        elseif (is_front_page() ) :
-		// else :
-		// 	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		// endif;
+     the_title( '<h1 class="entry-title"><a href="'.esc_url( get_permalink() ). '" rel="bookmark">', '</a></h1>' );
 
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
 				<?php
-        //                            if(is_front_page()):
-        //
-        //                             else:
-        //                                 spacewalker_posted_on();
-				// spacewalker_posted_by();
-        //                             endif;
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
