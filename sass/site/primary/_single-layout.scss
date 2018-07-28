@@ -184,20 +184,27 @@
 
 
 @media screen and (min-width: 1300px){
-	.single	{
-		& article{
-			display: block;
-			max-width: none;
+	.single	.site-main{
+		display: grid;
+		grid-template-columns: 1fr 1300px 1fr;
+
+		& article, .navigation, .comments-area{
+			grid-column: 2/3;
+
 		}
 
-		& .entry-header, .entry-content, .entry-footer,.navigation, .comments-area{
-				max-width: 1300px;
-			}
+		& article .post-thumbnail img{
+			grid-column: 1 / span 4;
+		}
+
+		& .navigation, .comments-area{
+			margin: 0;
+		}
+
 
 		& .entry-header, .entry-content , .entry-footer {
-			padding-left: 4%;
-			padding-right: 4%;
-			margin: 0 auto;
+
+			margin: 0;
 		}
 
 }
