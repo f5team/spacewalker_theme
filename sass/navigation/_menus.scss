@@ -12,11 +12,6 @@
   top: 0;
   left: 0;
 
-  &:after {
-    content: "";
-    clear: both;
-    display: table;
-  }
 
 }
 .wrapper-header {
@@ -63,7 +58,6 @@
     font-weight: bold;
     text-transform: uppercase;
     color: $color__logo-tagline;
-    // flex-grow: 1;
 
 
     .custom-logo-link {
@@ -78,6 +72,8 @@
   }
 
 	@supports (display: flex){
+
+
 		.site-branding, .main-navigation{
 			float: none;
 		}
@@ -97,7 +93,6 @@
 
 
   @media screen and (min-width: $size__medium-screen) {
-
 
     .site-branding {
       .custom-logo-link {
