@@ -4,12 +4,29 @@
 	display: none;
 }
 
+
 .single article{
-	margin: 3em auto;
+	margin: 2em auto;
+	position: relative;
+	min-height: 0;
+
 	& .entry-content {
-	margin: 1.5em 0 1.5em 0;
+	margin: 3em 0 1.5em 0;
 	}
+
 }
+
+.single .site-main article .post-thumbnail img{
+		position: absolute;
+
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+		height: 170px;
+		object-fit: cover;
+
+	}
 
 .single {
 	& ol,ul {
@@ -20,6 +37,18 @@
 	list-style-type: square;
 	}
 }
+	& .comment-respond{
+		background-color: rgba(#F0F0F0,0.25);
+		padding: 1em;
+		padding-left: 2em;
+		padding-right: 2em;
+		border-radius: 5px;
+
+
+		& h3{
+			margin-top: .25em;
+		}
+	}
 
 }
 
@@ -38,6 +67,17 @@
 			& p{
 				font-size: 1.25em;
 			}
+
+			& blockquote{
+				border-left: 2px solid white;
+				margin-left: .75em;
+
+				& p {
+					margin-left: .75em;
+				}
+
+			}
+
 		}
 
 	& a{
@@ -47,9 +87,20 @@
 
 	& .comments-area{
 		margin-top: 1em;
+
 		& form p{
 			margin-top: .5em;
 			margin-bottom: .5em;
+
+			&:nth-of-type(3),
+			&:nth-of-type(4){
+				display: inline-block;
+			}
+
+			& label {
+				width: 25%;
+
+			}
 		}
 	}
 }
@@ -57,9 +108,10 @@
 
 .single .entry-header{
 	margin-bottom: 1em;
+	padding-top: 1.75em;
 
 	& h1{
-		margin:0;
+		margin: 0;
 	}
 }
 
@@ -104,9 +156,10 @@
 	.single {
 		& article{
 			margin: 0 auto;
-			margin-top: 8em;
+			margin-top: 12em;
 			margin-bottom: 2em;
 			max-width: 1200px;
+
 		}
 
 		& .navigation, .comments-area{
@@ -118,6 +171,10 @@
 			display: inline-block;
 		}
 	}
+
+	.single .site-main article .post-thumbnail img{
+
+		}
 }
 
 
