@@ -5,6 +5,7 @@
 	margin: 0 3%;
  	grid-template-columns: 1fr;
 	margin-top: 1vh;
+	max-width: 1500px;
 
 	&:first-of-type{
 		margin-top: 3vh;
@@ -166,6 +167,7 @@
 @media screen and (min-width: 1000px){
 	.blogsection{
 		grid-template-columns: repeat(3,1fr);
+		margin: 0 auto;
 
 		& .section-title{
 				grid-column: 1/4;
