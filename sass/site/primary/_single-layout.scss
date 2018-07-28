@@ -1,4 +1,5 @@
 /* single page*/
+
 .single .seperator{
 	display: none;
 }
@@ -10,7 +11,7 @@
 	min-height: 0;
 
 	& .entry-content {
-	margin: 3em 0 1.5em 0;
+	margin-top: 3em;
 	}
 
 }
@@ -22,7 +23,7 @@
 		top: 0;
 		width: 100%;
 		z-index: -1;
-		height: 170px;
+		height: 100px;
 		object-fit: cover;
 
 	}
@@ -39,8 +40,6 @@
 	& .comment-respond{
 		background-color: rgba(#F0F0F0,0.25);
 		padding: 1em;
-		padding-left: 2em;
-		padding-right: 2em;
 		border-radius: 5px;
 
 
@@ -74,35 +73,35 @@
 				& p {
 					margin-left: .75em;
 				}
-
 			}
-
-		}
+	}
 
 	& a{
 		border: none;
 	}
-	}
+}
 
 	& .comments-area{
 		margin-top: 1em;
 
 		& form p{
-			margin-top: .5em;
-			margin-bottom: .5em;
+			margin: .75em 0;
+		}
 
-			&:nth-of-type(3),
-			&:nth-of-type(4){
-				display: inline-block;
-			}
+		& form label,input{
+			display: block;
+		}
 
-			& label {
-				width: 25%;
+		& form [type="checkbox"], label[for="wp-comment-cookies-consent"]{
+			display: inline;
+		}
 
-			}
+		& form input[type="text"], input[type="email"], input[type="url"]{
+			width: 100%;
+		}
+
 		}
 	}
-}
 
 
 .single .entry-header{
@@ -154,15 +153,13 @@
 @media screen and (min-width: 600px){
 	.single {
 		& article{
+			display: block;
 			margin: 0 auto;
 			margin-top: 12em;
 			margin-bottom: 2em;
-			max-width: 1200px;
-
 		}
 
 		& .navigation, .comments-area{
-			max-width: 1200px;
 			margin: 0 auto;
 		}
 
@@ -172,8 +169,16 @@
 	}
 
 	.single .site-main article .post-thumbnail img{
-
+				height: 130px;
 		}
+
+	.single .comment-respond{
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+
+
 }
 
 
@@ -182,6 +187,18 @@
 	.single	{
 		& article{
 			display: block;
+			max-width: none;
 		}
-	}
+
+		& .entry-header, .entry-content, .entry-footer,.navigation, .comments-area{
+				max-width: 1300px;
+			}
+
+		& .entry-header, .entry-content , .entry-footer {
+			padding-left: 4%;
+			padding-right: 4%;
+			margin: 0 auto;
+		}
+
+}
 }
