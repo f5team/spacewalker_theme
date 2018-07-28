@@ -36,7 +36,7 @@
 	}
 
 	& .entry-content p{
-		height: 30vh;
+		height: 25vh;
 		font-size: 1.15em;
 	}
 
@@ -133,7 +133,7 @@
 
 
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 600px){
 	.blogsection{
 		grid-template-columns: repeat(2,1fr);
 		grid-gap: 2vh;
@@ -149,7 +149,7 @@
 				}
 
 			& .entry-content p{
-				height: 35vh;
+				height: 25vh;
 				font-size: .95em;
 		}
 	}
@@ -164,10 +164,11 @@
 }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1300px){
 	.blogsection{
 		grid-template-columns: repeat(3,1fr);
 		margin: 0 auto;
+		max-width: 1200px;
 
 		& .section-title{
 				grid-column: 1/4;
