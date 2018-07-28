@@ -7,23 +7,30 @@
 
 .single article{
 	margin: 2em auto;
-	position: relative;
 	min-height: 0;
+	position: relative;
+
 
 	& .entry-content {
 	margin-top: 3em;
+	}
+
+	& .entry-header{
+		& h1{
+			position: absolute;
+			top: 250px;
+		}
 	}
 
 }
 
 .single .site-main article .post-thumbnail img{
 		position: absolute;
-
 		left: 0;
 		top: 0;
 		width: 100%;
 		z-index: -1;
-		height: 100px;
+		height: 300px;
 		object-fit: cover;
 
 	}
@@ -60,6 +67,7 @@
 	}
 
 	& .entry-content{
+		margin-top: 25em;
 		width: auto;
 
 			& p{
@@ -157,7 +165,17 @@
 			margin: 0 auto;
 			margin-top: 12em;
 			margin-bottom: 2em;
+
+		& .entry-content{
+			margin-top: 18em;
 		}
+
+		& .entry-header{
+			& h1{
+				top: 230px;
+			}
+	}
+}
 
 		& .navigation, .comments-area{
 			margin: 0 auto;
@@ -167,10 +185,6 @@
 			display: inline-block;
 		}
 	}
-
-	.single .site-main article .post-thumbnail img{
-				height: 130px;
-		}
 
 	.single .comment-respond{
 		padding-left: 2em;
@@ -193,19 +207,15 @@
 
 		}
 
-		& article .post-thumbnail img{
-			grid-column: 1 / span 4;
-		}
-
 		& .navigation, .comments-area{
 			margin: 0;
 		}
 
-
-		& .entry-header, .entry-content , .entry-footer {
-
-			margin: 0;
+		& article .post-thumbnail img{
+			position: absolute;
 		}
 
+
 }
+
 }
