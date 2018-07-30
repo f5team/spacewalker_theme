@@ -11,7 +11,7 @@ html {
 }
 
 body {
-	background: $color__background-body, url('http://localhost:8888/spacewalker/wp-content/uploads/2018/07/pink-dust.png') repeat !important;
+	background: $color__background-body;
 	background-blend-mode: hard-light !important;
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 
@@ -21,9 +21,10 @@ body {
 
 }
 
+// NOTE: highlight color and text on selection
 p {
-	&::-moz-selection { background: $color__text-select; }
-	&::selection { background: $color__text-select; }
+	&::-moz-selection { background: $color__main-blue; color: $color__main-purple;}
+	&::selection { background: $color__main-blue; color: $color__main-purple; }
 }
 
 hr {

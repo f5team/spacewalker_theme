@@ -104,32 +104,32 @@
 
 // NOTE: FOOTER Navigation Styling
 .site-footer {
+  background: $color__main-purple-dark;
+
   color: $color__link-menu;
-  @include commonWidth();
+  padding: 2em 5em 2em 5em;
+  margin: auto;
 
-  #footer {
-
-    width: 100%;
-    border-bottom: 1px solid $color__text-body;
-    padding-bottom: 2em;
-
-    .post-thumbnail {
-      display: none;
-    }
-  }
 
   .site-info {
     text-align: center;
-    margin-bottom: 1em;
+
+    p {
+      color: $color__link-menu;
+      margin: 0;
+      padding: 0;
+    }
   }
 
-  #social-menu{
+  .footer-navigation{
     li {
-      display: inline-block;
+      text-align: center;
+      display: block;
       font-size: 1.2em;
-      margin: 0 1em 0 1em;
+      margin-bottom: 1em;
 
       a {
+        @include font-size(1);
         color: $color__button-social;
         transition: all 1s;
 
@@ -141,65 +141,25 @@
     }
   }
 
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-items: center;
-
-    #footer {
-      grid-column: 1 / -1;
-    }
-    .site-info {
-      grid-column: 1/-1;
-    }
-    #site-navigation {
-      grid-column: 1/-1;
-    }
-  }
-
   @media screen and (min-width: $size__medium-screen) {
+    // @include commonWidth();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    #footer {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .footer-navigation{
 
-      .post-thumbnail {
-        display: block;
-      }
-
-      .entry-content {
-        margin-left: 2em;
-      }
-    }
-    .site-info {
-      text-align: left;
-      grid-column: 1;
-      justify-self: start;
-    }
-
-    #site-navigation {
-      grid-column: 2;
-      justify-self: end;
-    }
-
-    #social-menu{
       li {
-        margin: 0 0 0 1em;
-
-        a {
-          color: $color__button-social;
-          transition: all 1s;
-
-          &:hover {
-            color: $color__link-hover;
-            transition: all 1s;
-          }
-        }
+        display: inline-block;
+        margin-right: 1em;
+        margin-bottom: 0em;
       }
     }
   }
 
+  @media screen and (min-width: $size__large-screen) {
+    max-width: 1500px;
+  }
 }
 
 /* Small menu. */

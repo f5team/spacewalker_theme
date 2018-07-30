@@ -1,6 +1,6 @@
 .site-content {
   padding-bottom: 2em;
-
+  
   article {
     // NOTE: max-width for the whole contain
     @include commonWidth();
@@ -110,8 +110,9 @@
     img {
       max-width: 70%;
       height: auto;
-      border-radius: 50%;
-      animation: pulseobject 2s infinite;
+      animation: rotateobjectinfinite 10s ease-in-out;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
     }
   }
 

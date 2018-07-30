@@ -6,3 +6,91 @@
 		max-width: 100%;
 	}
 }
+
+
+// NOTE: aside - widget style
+.widget-area {
+  @include commonWidth();
+  text-align: center;
+
+  section , .sidebar-social{
+
+    h2 {
+      color: white;
+      padding-top: 2em;
+    }
+  }
+  .social-sidebar-navigation {
+    li {
+      display: inline-block;
+      padding: 1em 1em 0 1em;
+      margin-bottom: 1em;
+
+      a {
+        @include font-size(1.25);
+        color: $color__text-body;
+        &:hover {
+          color: $color__link-hover;
+        }
+      }
+    }
+  }
+  #nf-form-4-cont {
+    margin-top: 2em;
+  }
+  .nf-field-container {
+    margin-bottom: 1em;
+  }
+
+  //NOTE: styling contact form in footer
+
+
+  #media_image-2 {
+    display: none;
+  }
+
+  @media screen and (min-width: $size__medium-screen) {
+    text-align: left;
+    padding-top: 1em;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    grid-gap: 4em;
+    align-items: start;
+
+    .nf-field-label {
+      margin: 0;
+    }
+
+    .social-sidebar-navigation {
+      li {
+        padding: 1em 1em 0 0;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: $size__large-screen) {
+    max-width: 1500px;
+    grid-template-columns: 250px 1fr 1fr ;
+    grid-template-rows: 1fr;
+
+    section {
+      height: 100%;
+    }
+
+    #media_image-2 {
+      display: block;
+      img {
+        margin-top: 1em;
+      }
+    }
+
+    .social-sidebar-navigation {
+      li {
+        padding: .5em 1.25em 1.25em 0;
+      }
+    }
+  }
+}

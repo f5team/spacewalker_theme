@@ -14,10 +14,11 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: $color__text-input;
-	border: 1px solid $color__border-input;
+	color: white;
+	border: 1px solid white;
 	border-radius: 3px;
 	padding: 3px;
+	box-sizing: border-box;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -30,4 +31,39 @@ select {
 
 textarea {
 	width: 100%;
+}
+
+input[type="search"] {
+	background: none;
+	color: white;
+	padding: .5em .7em;
+	display: block;
+	width: 100%;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+	&:focus {
+		color: white;
+		background: rgba(255,255,255,.5);
+		border: 1px solid rgba(255,255,255,.5);
+	}
+}
+
+input[type="text"] ,
+input[type="email"] ,
+textarea
+{
+	background: none;
+	border: none;
+	border-radius: 0%;
+	border-bottom: 1px solid white;
+	padding: .5em 1em 1em 0em;
+	transition: all .5s;
+	&:focus {
+		padding: .5em 1em;
+		color: white;
+		background: none;
+		border: 1px solid white;
+		transition: all .5s;
+		border-radius: 5px;
+	}
 }
