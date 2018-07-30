@@ -45,7 +45,9 @@ if ( ! function_exists( 'spacewalker_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary-menu' => esc_html__( 'Primary', 'spacewalker' ),
-			'social-menu' => esc_html__( 'Social', 'spacewalker' )
+			'social-menu' => esc_html__( 'Social', 'spacewalker' ),
+			'footer-menu' => esc_html__( 'Footer', 'spacewalker' ),
+			'social-sidebar-menu' => esc_html__( 'Social Sidebar', 'spacewalker' )
 		) );
 
 		/*

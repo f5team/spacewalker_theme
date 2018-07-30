@@ -1,5 +1,7 @@
 html {
 	box-sizing: border-box;
+
+
 }
 
 *,
@@ -9,11 +11,19 @@ html {
 }
 
 body {
+	background: $color__background-body, url('http://localhost:8888/spacewalker/wp-content/uploads/2018/07/pink-dust.png') repeat !important;
+	background-blend-mode: hard-light !important;
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 
 	margin: 0 auto;
 	// padding: 0 5em 0 5em;
 	color: $color__text-body;
+
+}
+
+p {
+	&::-moz-selection { background: $color__text-select; }
+	&::selection { background: $color__text-select; }
 }
 
 hr {

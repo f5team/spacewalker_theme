@@ -59,7 +59,7 @@ big {
 }
 
 // Font Awesome
-a[href*='instagram']:before, a[href*='twitter']:before , a[href*='youtube']:before , a[href*='facebook']:before,
+a[href*='instagram']:before, a[href*='twitter']:before , a[href*='youtube']:before , a[href*='facebook']:before, a[href*='github']:before , a[href*='linkedin']:before , a[href*='pinterest']:before ,a[href*='google']:before ,
 a[href*='apple']:after , a[href*='android']:after
 {
   font-family: "Font Awesome 5 Brands";
@@ -69,7 +69,16 @@ a[href*='apple']:after , a[href*='android']:after
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 
+}
 
+.main-navigation button:before, .main-navigation button.menu-toggle-cross:before{
+	font-family: "Font Awesome 5 Free";
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 900;
 }
 
 a[href*='instagram']:before {
@@ -84,6 +93,19 @@ a[href*='youtube']:before {
 a[href*='facebook']:before {
   content: "\f39e";
 }
+a[href*='github']:before {
+  content: "\f09b";
+}
+a[href*='linkedin']:before {
+  content: "\f0e1";
+}
+a[href*='pinterest']:before {
+  content: "\f231";
+}
+a[href*='google']:before {
+  content: "\f0d5";
+}
+
 a[href*='apple']:after {
   content: "\f179";
   padding-left: .7em;
@@ -91,4 +113,10 @@ a[href*='apple']:after {
 a[href*='android']:after {
   content: "\f17b";
   padding-left: .7em;
+}
+.main-navigation button:before{
+	content: "\f0c9";
+}
+.main-navigation.toggled button:before{
+	content: "\f00d";
 }

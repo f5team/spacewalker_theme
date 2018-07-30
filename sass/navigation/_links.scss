@@ -1,6 +1,7 @@
 a {
 	color: $color__link;
 	text-decoration: none;
+	transition: all 1s;
 
 	&:visited {
 		color: $color__link;
@@ -8,13 +9,16 @@ a {
 	&:hover,
 	&:focus,
 	&:active {
+		transition: all 1s;
 		color: $color__link-hover;
 	}
 	&:focus {
 		outline: thin dotted;
+		transition: all 1s;
 	}
 	&:hover,
 	&:active {
 		outline: 0;
+		transition: all 1s;
 	}
 }
