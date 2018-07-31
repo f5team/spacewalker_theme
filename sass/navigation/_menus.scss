@@ -179,8 +179,11 @@
 
 // NOTE: FOOTER Navigation Styling
 .site-footer {
+  background: $color__main-purple-dark;
+
   color: $color__link-menu;
-  @include commonWidth();
+  width: 100vw;
+  margin: auto;
 
   .wrapper-footer {
     margin: auto;
@@ -190,30 +193,25 @@
   }
 
 
+  .site-info {
+    text-align: center;
 
-  #footer {
-
-    width: 100%;
-    border-bottom: 1px solid $color__text-body;
-    padding-bottom: 2em;
-
-    .post-thumbnail {
-      display: none;
+    p {
+      color: $color__link-menu;
+      margin: 0;
+      padding: 0;
     }
   }
 
-  .site-info {
-    text-align: center;
-    margin-bottom: 1em;
-  }
-
-  #social-menu{
+  .footer-navigation{
     li {
-      display: inline-block;
+      text-align: center;
+      display: block;
       font-size: 1.2em;
-      margin: 0 1em 0 1em;
+      margin-bottom: 1em;
 
       a {
+        @include font-size(1);
         color: $color__button-social;
         transition: all 1s;
 
@@ -225,63 +223,46 @@
     }
   }
 
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-items: center;
-
-    #footer {
-      grid-column: 1 / -1;
-    }
-    .site-info {
-      grid-column: 1/-1;
-    }
-    #site-navigation {
-      grid-column: 1/-1;
-    }
-  }
-
-  @media screen and (min-width: $size__medium-screen) {
-
-    #footer {
+  .wrapper-footer {
+    @media screen and (min-width: $size__medium-screen) {
+      // @include commonWidth();
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
 
-      .post-thumbnail {
-        display: block;
-      }
+      .footer-navigation{
 
-      .entry-content {
-        margin-left: 2em;
-      }
-    }
-    .site-info {
-      text-align: left;
-      grid-column: 1;
-      justify-self: start;
-    }
-
-    #site-navigation {
-      grid-column: 2;
-      justify-self: end;
-    }
-
-    #social-menu{
-      li {
-        margin: 0 0 0 1em;
-
-        a {
-          color: $color__button-social;
-          transition: all 1s;
-
-          &:hover {
-            color: $color__link-hover;
-            transition: all 1s;
-          }
+        li {
+          display: inline-block;
+          margin-right: 1em;
+          margin-bottom: 0em;
         }
       }
     }
+
+    @media screen and (min-width: $size__large-screen) {
+      max-width: 1500px;
+    }
   }
 
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+.main-navigation {
+  ul{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
 }
