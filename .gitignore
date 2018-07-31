@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 style.css
 style.css.map
 .DS_Store
@@ -73,3 +74,12 @@ sass/typography/_copy.scss
 sass/site/_site.scss
 sass/navigation/_menus.scss
 sass/mixins/_mixins-master.scss
+=======
+template-parts/content_footer.php
+template-parts/content-excerpt.php
+sass/site/primary/_single-layout.scss
+sass/site/primary/_front-layout.scss
+sass/site/primary/_community-layout.scss
+sass/layout/_global.scss
+home.php
+>>>>>>> jeannguyen
