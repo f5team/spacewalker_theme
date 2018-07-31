@@ -1,10 +1,5 @@
 // NOTE: HEADER Navigation styling
 .site-header {
-<<<<<<< HEAD
-=======
-  margin: 1.25em auto;
-  padding: 2em 2em 1em 2em;
->>>>>>> thanya
   width: 100%;
   height: 100px;
   margin: auto;
@@ -186,7 +181,6 @@
 .site-footer {
   color: $color__link-menu;
   @include commonWidth();
-<<<<<<< HEAD
 
 
 
@@ -199,15 +193,6 @@
     .post-thumbnail {
       display: none;
     }
-=======
-  padding-top: 6em;
-
-  #footer {
-    grid-column: 1 / -1;
-    width: 100%;
-    border-bottom: 1px solid $color__text-body;
-    padding-bottom: 2em;
->>>>>>> thanya
   }
 
   .site-info {
