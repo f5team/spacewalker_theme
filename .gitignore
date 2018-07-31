@@ -36,3 +36,4 @@ template-parts/content-about.php
 template-parts/content-footer.php
 template-parts/content_footer.php
 sass/navigation/_menus.scss
+.DS_Store
