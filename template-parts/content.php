@@ -8,14 +8,14 @@
  */
 
 ?>
-        <?php 
+        <?php
             if(is_front_page()):
                 ?> <article id="<?php the_title(); ?>" <?php post_class(); ?>> <?php
              else:
                 ?>  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <?php
             endif;
         ?>
-       
+
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
@@ -44,23 +44,57 @@
 
 	<div class="entry-content">
 		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'spacewalker' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+		if(is_front_page()):
+				$title = get_the_title( $post);
+				if($title == 'section1'):
+					?>
+					<div id="spaceship-wrapper">
+							<div id="path-wrapper">
+								<?php get_template_part( 'circle.svg' ); ?>
+							</div>
+							<div id="spaceship">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/spaceship.png" alt="">
+							</div>
+					</div>
+					<?php
+				endif;
+			the_content( sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'spacewalker' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			) );
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'spacewalker' ),
-			'after'  => '</div>',
-		) );
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'spacewalker' ),
+				'after'  => '</div>',
+			) );
+		else:
+			the_content( sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'spacewalker' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			) );
+
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'spacewalker' ),
+				'after'  => '</div>',
+			) );
+		endif;
+
 		?>
 	</div><!-- .entry-content -->
 

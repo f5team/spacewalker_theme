@@ -5,7 +5,23 @@ jQuery(document).ready(function ($) {
   });
 
 	$(".menu-toggle").on("click", function(){
-		$(this).css('background', 'red');
 		$(this).toggleClass("menu-toggle-cross");
 	});
+
+	// if($(ellipse).length != 0){
+		// $('svg').css('background', 'red');
+	// }
+
+	var path = anime.path('#path');
+
+	var motionPath = anime({
+	  targets: '#spaceship',
+	  translateX: path('x'),
+	  translateY: path('y'),
+	  rotate: path('angle'),
+	  easing: 'linear',
+	  duration: 10000,
+	  loop: true
+	});
+
 });
