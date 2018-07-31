@@ -211,3 +211,12 @@ function filter_ptags_on_images($content) {
 }
 add_filter('acf_the_content', 'filter_ptags_on_images');
 add_filter('the_content', 'filter_ptags_on_images');
+
+//add svg support
+function add_file_types_to_uploads($file_types){
+	$new_filetypes = array();
+	$new_filetypes['svg'] = 'image/svg+xml';
+	$file_types = array_merge($file_types, $new_filetypes );
+	return $file_types;
+}
+add_action('upload_mimes', 'add_file_types_to_uploads');
