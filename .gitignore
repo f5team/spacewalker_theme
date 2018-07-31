@@ -47,6 +47,7 @@ style.css
 sass/site/primary/_single-layout.scss
 style.css
 style.css.map
+<<<<<<< HEAD
 >>>>>>> thanya
 footer.php
 front-page.php
@@ -132,3 +133,7 @@ style.css
 style.css.map
 template-parts/content.php
 template-parts/content_footer.php
+=======
+>>>>>>> parent of cf8d626... Reverse
+style.css
+style.css.map
