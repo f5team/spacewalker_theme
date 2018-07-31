@@ -21,6 +21,8 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+
 // Additional colors
 $color__text-title-small: #ca99ff;
 $color__text-title-big: white;
@@ -53,4 +55,4 @@ $color__main-blue: #14b5f4;
 $color__main-green: #27e2b6;
 $color__main-orange: #f79463;
 $color__main-purple: #411d70;
-$color__main-purple-dark: #140a21;
+$color__main-purple-dark: darken($color__main-purple,20%);
