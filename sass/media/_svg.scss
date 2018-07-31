@@ -1,0 +1,23 @@
+#spaceship-wrapper{
+  position: absolute !important;
+	top: -190px;
+	left: -200px;
+
+
+	img{
+		width: 50px;
+		height: auto;
+
+		transform: rotate(30deg);
+	}
+
+	@media screen and (max-width: $size__large-screen){
+		display: none;
+	}
+
+
+}
+
+// #section1 img{
+// 	position: relative;
+// }

@@ -18,7 +18,9 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
+
 		<?php
+
       // NEW STUFF HERE
               $front_query = new WP_Query( array(
                       'category_name' => 'front-page',

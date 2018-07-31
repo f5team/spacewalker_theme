@@ -1558,4 +1558,23 @@ object {
   display: block;
 }
 
+/*--------------------------------------------------------------
+## SVG
+--------------------------------------------------------------*/
+#spaceship-wrapper {
+  position: absolute !important;
+  top: -190px;
+  left: -200px;
+}
+#spaceship-wrapper img {
+  width: 50px;
+  height: auto;
+  transform: rotate(30deg);
+}
+@media screen and (max-width: 1300px) {
+  #spaceship-wrapper {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
