@@ -18,8 +18,6 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-<<<<<<< HEAD
-
 		<?php
 
       // NEW STUFF HERE
@@ -44,7 +42,6 @@ get_header();
                   get_template_part( 'template-parts/content', 'none' );
               endif;
     ?>
-=======
 		<?php
 
                     // NEW STUFF HERE
@@ -67,10 +64,8 @@ get_header();
                                             wp_reset_postdata();
                             else :
                                 get_template_part( 'template-parts/content', 'none' );
-                            endif; 
+                            endif;
                             ?>
->>>>>>> thanya
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
