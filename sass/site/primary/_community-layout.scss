@@ -20,11 +20,6 @@
 	margin-bottom: 3vh;
 	position: relative;
 
-	& .entry-header h1,p{
-		color: black;
-	}
-
-
 	& .entry-header h1{
 		margin-top: 1vh;
 		font-size: 2em;
@@ -32,12 +27,14 @@
 			text-decoration: none;
 			font-family: "Oswald", "times new roman", helvetica, sans-serif;
 			color: black;
+
 		}
 	}
 
 	& .entry-content p{
-		height: 25vh;
 		font-size: 1.15em;
+		margin-bottom: 8vh;
+		color: black;
 	}
 
 	& a{
@@ -64,6 +61,7 @@
 	}
 
 }
+
 
 
 .blog .blog-entry{
@@ -124,7 +122,6 @@
 	& .cat-links, .tags-links{
 	display: block;
 	color: black;
-	font-size: 1em;
 }
 	& .comments-link,.edit-link{
 		display: none;
@@ -136,7 +133,7 @@
 @media screen and (min-width: 600px){
 	.blogsection{
 		grid-template-columns: repeat(2,1fr);
-		grid-gap: 2vh;
+		grid-gap: 3vh;
 
 		& .section-title{
 				grid-column: 1/3;
@@ -149,7 +146,6 @@
 				}
 
 			& .entry-content p{
-				height: 25vh;
 				font-size: .95em;
 		}
 	}
@@ -158,7 +154,7 @@
 
 	.blog {
 		& .cat-links, .tags-links{
-			font-size: .75em;
+			font-size: .8em;
 		}
 
 }
@@ -178,7 +174,67 @@
 			display: block;
 			min-height: 0;
 
+		}
+
+}
+}
+
+// :hover-animation
+@media screen and (min-width: 1300px){
+	.blog .blogsection{
+	& article img{
+		transition: transform .25s;
+	}
+
+	& article:hover img{
+		transform: scale(1.02);
+		box-shadow: 2px 2px 5px;
+	}
+
+	& article {
+
+		& .entry-header{
+		position: relative;
+		}
+
+		& h1{
+			padding-left: .25em;
+		}
+
+		& .entry-header h1 a{
+			color: $color__text-title-small;
+		}
+
+
+		& .entry-title{
+		bottom: 0;
+		position: absolute;
+	}
+
+		& .entry-content p{
+			margin-top: 1em;
+			transition: 1s;
+		}
+
+}
+
+
+	& article:hover {
+
+		& .entry-title a{
+			color: #FFF;
+			font-size: 1.05em;
+		}
+
+		& .entry-content p{
+		margin-top: -.5em;
+		transition: .5s
+
+
+		}
+
 	}
 
 }
+
 }
