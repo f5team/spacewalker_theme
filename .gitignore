@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 style.css
 style.css.map
 .DS_Store
@@ -114,6 +115,9 @@ style.css.map
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of f61598f... Revert "Merge branch 'thanya'"
 =======
 sass/site/primary/_single-layout.scss
 style.css
@@ -135,6 +139,7 @@ style.css
 style.css.map
 template-parts/content.php
 template-parts/content_footer.php
+<<<<<<< HEAD
 =======
 >>>>>>> parent of cf8d626... Reverse
 style.css
@@ -145,3 +150,5 @@ style.css.map
 >>>>>>> parent of 08566c0... Merge branch 'thanya'
 =======
 >>>>>>> parent of 08566c0... Merge branch 'thanya'
+=======
+>>>>>>> parent of f61598f... Revert "Merge branch 'thanya'"
