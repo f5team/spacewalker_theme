@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 style.css
 style.css.map
 .DS_Store
@@ -110,3 +111,24 @@ style.css.map
 >>>>>>> khanhdinh
 style.css
 style.css.map
+=======
+sass/site/primary/_single-layout.scss
+style.css
+style.css.map
+style.css
+style.css.map
+style.css
+>>>>>>> thanya
+functions.php
+front-page.php
+footer.php
+sass/layout/_global.scss
+sass/mixins/_mixins-master.scss
+sass/navigation/_menus.scss
+sass/site/_site.scss
+sass/site/primary/_front-layout.scss
+sass/typography/_copy.scss
+style.css
+style.css.map
+template-parts/content.php
+template-parts/content_footer.php

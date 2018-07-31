@@ -20,6 +20,7 @@ get_header();
 
 		<?php
 
+<<<<<<< HEAD
       // NEW STUFF HERE
               $front_query = new WP_Query( array(
                       'category_name' => 'front-page',
@@ -44,6 +45,8 @@ get_header();
     ?>
 		<?php
 
+=======
+>>>>>>> thanya
                     // NEW STUFF HERE
                                     $front_query = new WP_Query( array(
                                             'category_name' => 'front-page',
@@ -59,6 +62,16 @@ get_header();
                                 while ( $front_query->have_posts() ) : $front_query->the_post();
                                     get_template_part( 'template-parts/content', get_post_format() );
                                 endwhile;
+<<<<<<< HEAD
+=======
+
+                    // ONE LAST ADDITION:
+                                            wp_reset_postdata();
+                            else :
+                                get_template_part( 'template-parts/content', 'none' );
+                            endif; 
+                            ?>
+>>>>>>> thanya
 
                     // ONE LAST ADDITION:
                                             wp_reset_postdata();
