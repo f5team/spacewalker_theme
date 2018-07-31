@@ -181,6 +181,13 @@
 
 // :hover-animation
 @media screen and (min-width: 1300px){
+	.site-content .blogsection{
+		& article a:hover{
+		transition: none;
+		background: none;
+		}
+	}
+
 	.blog .blogsection{
 	& article img{
 		transition: transform .25s;
@@ -209,13 +216,12 @@
 		& .entry-title{
 		bottom: 0;
 		position: absolute;
-	}
+		}
 
 		& .entry-content p{
 			margin-top: 1em;
 			transition: 1s;
 		}
-
 }
 
 
@@ -227,10 +233,8 @@
 		}
 
 		& .entry-content p{
-		margin-top: -.5em;
-		transition: .5s
-
-
+			margin-top: -.5em;
+			transition: .5s
 		}
 
 	}
