@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 style.css
 style.css.map
 .DS_Store
@@ -39,3 +40,31 @@ sass/navigation/_menus.scss
 .DS_Store
 style.css.map
 style.css
+=======
+sass/site/primary/_single-layout.scss
+style.css
+style.css.map
+>>>>>>> thanya
+footer.php
+front-page.php
+functions.php
+sass/site/_site.scss
+sass/navigation/_menus.scss
+sass/mixins/_mixins-master.scss
+sass/layout/_global.scss
+sass/site/primary/_front-layout.scss
+sass/typography/_copy.scss
+style.css
+style.css.map
+footer.php
+front-page.php
+functions.php
+home.php
+sass/mixins/_mixins-master.scss
+sass/navigation/_menus.scss
+sass/site/_site.scss
+sass/site/primary/_community-layout.scss
+sass/typography/_copy.scss
+style.css
+style.css.map
+template-parts/content-excerpt.php

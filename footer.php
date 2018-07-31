@@ -27,7 +27,7 @@
                     // ADDITIONAL MODIFICATION HERE:
                                 /* Start the Loop */
                                 while ( $footer_query->have_posts() ) : $footer_query->the_post();
-                                    get_template_part( 'template-parts/content-footer', '' );
+                                    get_template_part( 'template-parts/content_footer', get_post_format() );
                                 endwhile;
 
                     // ONE LAST ADDITION:
@@ -42,7 +42,6 @@
 				/* translators: %s: CMS name, i.e. WordPress. */
 				printf( esc_html__( 'Proudly powered by %s', 'spacewalker' ), 'F5 Team.' );
 				?>
-			</a> -->
 			<p>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
