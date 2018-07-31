@@ -59,11 +59,7 @@ big {
 }
 
 // Font Awesome
-<<<<<<< HEAD
 a[href*='instagram']:before, a[href*='twitter']:before , a[href*='youtube']:before , a[href*='facebook']:before, a[href*='github']:before , a[href*='linkedin']:before , a[href*='pinterest']:before ,a[href*='google']:before ,
-=======
-a[href*='instagram']:before, a[href*='twitter']:before , a[href*='youtube']:before , a[href*='facebook']:before,
->>>>>>> thanya
 a[href*='apple']:after , a[href*='android']:after
 {
   font-family: "Font Awesome 5 Brands";
@@ -73,7 +69,6 @@ a[href*='apple']:after , a[href*='android']:after
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 
-<<<<<<< HEAD
 }
 
 .main-navigation button:before, .main-navigation button.menu-toggle-cross:before{
@@ -84,9 +79,6 @@ a[href*='apple']:after , a[href*='android']:after
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 900;
-=======
-
->>>>>>> thanya
 }
 
 a[href*='instagram']:before {
@@ -101,7 +93,6 @@ a[href*='youtube']:before {
 a[href*='facebook']:before {
   content: "\f39e";
 }
-<<<<<<< HEAD
 a[href*='github']:before {
   content: "\f09b";
 }
@@ -115,8 +106,6 @@ a[href*='google']:before {
   content: "\f0d5";
 }
 
-=======
->>>>>>> thanya
 a[href*='apple']:after {
   content: "\f179";
   padding-left: .7em;
@@ -125,12 +114,9 @@ a[href*='android']:after {
   content: "\f17b";
   padding-left: .7em;
 }
-<<<<<<< HEAD
 .main-navigation button:before{
 	content: "\f0c9";
 }
 .main-navigation.toggled button:before{
 	content: "\f00d";
 }
-=======
->>>>>>> thanya

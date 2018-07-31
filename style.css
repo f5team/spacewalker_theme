@@ -65,7 +65,6 @@ small, .font_small {
   font-size: 0.75em;
 }
 
-<<<<<<< HEAD
 @keyframes floatobject {
   0% {
     transform: translateY(0px);
@@ -111,28 +110,6 @@ small, .font_small {
   100% {
     -moz-box-shadow: 0 0 0 0 rgba(49, 26, 84, 0);
     box-shadow: 0 0 0 0 rgba(49, 26, 84, 0);
-=======
-@-webkit-keyframes float-object {
-  0% {
-    -webkit-transform: translateY(0px);
-  }
-  50% {
-    -webkit-transform: translateY(-20px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-  }
-}
-@-webkit-keyframes rotate-object {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(10deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
->>>>>>> thanya
   }
 }
 /*--------------------------------------------------------------
@@ -492,10 +469,7 @@ button,
 input,
 select,
 optgroup,
-<<<<<<< HEAD
 span,
-=======
->>>>>>> thanya
 textarea {
     font-size: 16px;
     font-size: 1rem;
@@ -602,11 +576,7 @@ big {
   font-size: 1.25em;
 }
 
-<<<<<<< HEAD
 a[href*=instagram]:before, a[href*=twitter]:before, a[href*=youtube]:before, a[href*=facebook]:before, a[href*=github]:before, a[href*=linkedin]:before, a[href*=pinterest]:before, a[href*=google]:before,
-=======
-a[href*=instagram]:before, a[href*=twitter]:before, a[href*=youtube]:before, a[href*=facebook]:before,
->>>>>>> thanya
 a[href*=apple]:after, a[href*=android]:after {
   font-family: "Font Awesome 5 Brands";
   display: inline-block;
@@ -615,7 +585,6 @@ a[href*=apple]:after, a[href*=android]:after {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 }
-<<<<<<< HEAD
 
 .main-navigation button:before, .main-navigation button.menu-toggle-cross:before {
   font-family: "Font Awesome 5 Free";
@@ -657,23 +626,6 @@ a[href*=pinterest]:before {
 
 a[href*=google]:before {
   content: "";
-=======
-
-a[href*=instagram]:before {
-  content: "";
-}
-
-a[href*=twitter]:before {
-  content: "";
-}
-
-a[href*=youtube]:before {
-  content: "";
-}
-
-a[href*=facebook]:before {
-  content: "";
->>>>>>> thanya
 }
 
 a[href*=apple]:after {
@@ -685,7 +637,6 @@ a[href*=android]:after {
   content: "";
   padding-left: 0.7em;
 }
-<<<<<<< HEAD
 
 .main-navigation button:before {
   content: "";
@@ -694,8 +645,6 @@ a[href*=android]:after {
 .main-navigation.toggled button:before {
   content: "";
 }
-=======
->>>>>>> thanya
 
 /*--------------------------------------------------------------
 # Elements
@@ -719,7 +668,6 @@ body {
   margin: 0 auto;
   color: #ca99ff;
 }
-<<<<<<< HEAD
 
 p::-moz-selection {
   background: #14b5f4;
@@ -729,8 +677,6 @@ p::selection {
   background: #14b5f4;
   color: #411d70;
 }
-=======
->>>>>>> thanya
 
 hr {
   background-color: #ccc;
@@ -842,7 +788,6 @@ button:hover {
   transition: all 0.5s;
 }
 
-<<<<<<< HEAD
 button,
 input[type=button],
 input[type=reset],
@@ -883,8 +828,6 @@ input[type=submit]:hover {
   border: 1px solid #14b5f4;
 }
 
-=======
->>>>>>> thanya
 input[type=text],
 input[type=email],
 input[type=url],
@@ -905,10 +848,7 @@ textarea {
   border: 1px solid white;
   border-radius: 3px;
   padding: 3px;
-<<<<<<< HEAD
   box-sizing: border-box;
-=======
->>>>>>> thanya
 }
 input[type=text]:focus,
 input[type=email]:focus,
@@ -936,7 +876,6 @@ select {
 textarea {
   width: 100%;
 }
-<<<<<<< HEAD
 
 input[type=search] {
   background: none;
@@ -973,8 +912,6 @@ textarea:focus {
   transition: all 0.5s;
   border-radius: 5px;
 }
-=======
->>>>>>> thanya
 
 /*--------------------------------------------------------------
 # Navigation
@@ -985,45 +922,28 @@ textarea:focus {
 a {
   color: #27e2b6;
   text-decoration: none;
-<<<<<<< HEAD
   transition: all 1s;
-=======
->>>>>>> thanya
 }
 a:visited {
   color: #27e2b6;
 }
 a:hover, a:focus, a:active {
-<<<<<<< HEAD
   transition: all 1s;
-=======
->>>>>>> thanya
   color: #14b5f4;
 }
 a:focus {
   outline: thin dotted;
-<<<<<<< HEAD
   transition: all 1s;
 }
 a:hover, a:active {
   outline: 0;
   transition: all 1s;
-=======
-}
-a:hover, a:active {
-  outline: 0;
->>>>>>> thanya
 }
 
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 .site-header {
-<<<<<<< HEAD
-=======
-  margin: 1.25em auto;
-  padding: 2em 2em 1em 2em;
->>>>>>> thanya
   width: 100%;
   height: 100px;
   margin: auto;
@@ -1031,7 +951,6 @@ a:hover, a:active {
   z-index: 999;
   top: 0;
   left: 0;
-<<<<<<< HEAD
 }
 .site-header::after {
   content: "";
@@ -1093,74 +1012,24 @@ a:hover, a:active {
   }
   .wrapper-header .main-navigation {
     justify-self: flex-end;
-=======
-  z-index: 999;
-  transition: all 0.5;
-  -webkit-transition: all 0.5s;
-}
-.site-header .main-navigation {
-  text-transform: uppercase;
-}
-.site-header .main-navigation li {
-  display: inline-block;
-  padding: 0.5em;
-  margin-left: 1.5em;
-}
-.site-header .main-navigation a {
-  line-height: 3em;
-  color: white;
-}
-.site-header .main-navigation a:hover {
-  color: #14b5f4;
-  transition: all 1s;
-}
-.site-header .site-branding {
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.site-header .site-branding .custom-logo-link {
-  display: none;
-}
-.site-header .site-branding .site-title {
-  margin-left: 1em;
-}
-@media screen and (min-width: 600px) {
-  .site-header {
-    position: fixed;
-  }
-  .site-header .site-branding .custom-logo-link {
-    display: inline-block;
->>>>>>> thanya
   }
 }
 
 .scrolled {
-<<<<<<< HEAD
   background-color: rgba(20, 10, 33, 0.9);
-=======
-  background: rgba(20, 10, 33, 0.9);
->>>>>>> thanya
   transition: all 0.5;
   -webkit-transition: all 0.5s;
 }
 
 #primary-menu li:last-of-type {
   background-color: #f74354;
-<<<<<<< HEAD
   border: 1px solid #f74354;
-=======
->>>>>>> thanya
   transition: all 0.5s;
   border-radius: 5px;
   padding: 0.2em 1.5em;
   font-weight: bold;
 }
 #primary-menu li:last-of-type:hover {
-<<<<<<< HEAD
   color: #f74354;
   background: none;
   transition: all 0.5s;
@@ -1231,41 +1100,10 @@ a:hover, a:active {
   padding: 0 5em 0 5em;
 }
 .site-footer #footer {
-=======
-  background: #da3545;
-  transition: all 0.5s;
-}
-
-@media screen and (min-width: 700px) {
-  .site-header {
-    flex-wrap: nowrap;
-    margin: 0;
-  }
-  .site-header .site-branding {
-    flex-grow: 0;
-  }
-  .site-header .main-navigation {
-    flex-grow: 0;
-  }
-}
-#colophon {
-  clear: both;
-  color: white;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  margin: 3em auto;
-  padding: 0 5em 0 5em;
-  padding-top: 6em;
-}
-#colophon #footer {
-  grid-column: 1/-1;
->>>>>>> thanya
   width: 100%;
   border-bottom: 1px solid #ca99ff;
   padding-bottom: 2em;
 }
-<<<<<<< HEAD
 .site-footer #footer .post-thumbnail {
   display: none;
 }
@@ -1315,36 +1153,10 @@ a:hover, a:active {
     margin-left: 2em;
   }
   .site-footer .site-info {
-=======
-#colophon .site-info {
-  text-align: center;
-  margin-bottom: 1em;
-  grid-column: 1/-1;
-}
-#colophon #site-navigation {
-  grid-column: 1/-1;
-}
-#colophon #social-menu li {
-  display: inline-block;
-  margin: 0 1em 0 1em;
-  font-size: 1.2em;
-}
-#colophon #social-menu li a {
-  color: white;
-  transition: all 1s;
-}
-#colophon #social-menu li a:hover {
-  color: #14b5f4;
-  transition: all 1s;
-}
-@media screen and (min-width: 600px) {
-  #colophon .site-info {
->>>>>>> thanya
     text-align: left;
     grid-column: 1;
     justify-self: start;
   }
-<<<<<<< HEAD
   .site-footer #site-navigation {
     grid-column: 2;
     justify-self: end;
@@ -1360,12 +1172,6 @@ a:hover, a:active {
     color: #14b5f4;
     transition: all 1s;
   }
-=======
-  #colophon #site-navigation {
-    grid-column: 2;
-    justify-self: end;
-  }
->>>>>>> thanya
 }
 
 /*--------------------------------------------------------------
@@ -1447,7 +1253,6 @@ a:hover, a:active {
 .widget select {
   max-width: 100%;
 }
-<<<<<<< HEAD
 
 .widget-area {
   margin: 3em auto;
@@ -1516,8 +1321,6 @@ a:hover, a:active {
     padding: 0.5em 1.25em 1.25em 0;
   }
 }
-=======
->>>>>>> thanya
 
 /*--------------------------------------------------------------
 # Content
@@ -1525,7 +1328,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Global layouts
 --------------------------------------------------------------*/
-<<<<<<< HEAD
 .site-content {
   padding-bottom: 2em;
 }
@@ -1533,23 +1335,12 @@ a:hover, a:active {
   margin: 3em auto;
   padding: 0 5em 0 5em;
   padding-top: 2em;
-=======
-.site-content article {
-  margin: 3em auto;
-  padding: 0 5em 0 5em;
->>>>>>> thanya
 }
 .site-content article .post-thumbnail {
   text-align: center;
   width: 100%;
   margin: auto;
 }
-<<<<<<< HEAD
-=======
-.site-content article .entry-content {
-  width: 80vw;
-}
->>>>>>> thanya
 .site-content article a {
   color: white;
   border-radius: 5px;
@@ -1569,7 +1360,6 @@ a:hover, a:active {
   width: 100%;
   margin-bottom: 1em;
 }
-<<<<<<< HEAD
 @media screen and (min-width: 600px) {
   .site-content article {
     padding-top: 4em;
@@ -1588,28 +1378,6 @@ a:hover, a:active {
   }
   .site-content article .entry-content {
     margin: auto;
-=======
-@media screen and (min-width: 700px) {
-  .site-content article {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    min-height: 50vh;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .site-content article {
-    min-height: 100vh;
-    max-width: 1500px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .site-content article:nth-of-type(2) {
-    flex-direction: row-reverse;
-  }
-  .site-content article:nth-of-type(2) .post-thumbnail {
-    text-align: right;
->>>>>>> thanya
   }
   .site-content article .post-thumbnail {
     width: 100%;
@@ -1618,7 +1386,6 @@ a:hover, a:active {
     margin: auto;
     width: 90%;
   }
-<<<<<<< HEAD
   @supports (display: flex) {
     .site-content article {
       display: flex;
@@ -1637,17 +1404,12 @@ a:hover, a:active {
 #section1 {
   text-align: center;
 }
-=======
-}
-
->>>>>>> thanya
 #section1 a {
   text-align: center;
   display: block;
 }
 #section1 .post-thumbnail {
   transform: translatey(0px);
-<<<<<<< HEAD
   animation: floatobject 3s ease-in-out infinite;
   animation-timing-function: linear;
 }
@@ -1659,22 +1421,11 @@ a:hover, a:active {
   #section1 {
     margin-top: 5em;
   }
-=======
-  animation: float-object 3s ease-in-out infinite;
-  animation-timing-function: linear;
-}
-#section1 .post-thumbnail img {
-  animation: rotate-object 15s ease-in-out infinite;
-  animation-timing-function: linear;
-}
-@media screen and (min-width: 1000px) {
->>>>>>> thanya
   #section1 a {
     display: inline-block;
     margin-right: 1em;
   }
 }
-<<<<<<< HEAD
 @media screen and (min-width: 1000px) {
   #section1 {
     margin-top: 0;
@@ -1697,36 +1448,19 @@ a:hover, a:active {
     text-align: left;
   }
 }
-=======
-
-#section2 .post-thumbnail {
-  transform: translatey(0px);
-  animation: float-object 3s ease-in-out infinite;
-  animation-timing-function: linear;
-}
->>>>>>> thanya
 
 #section3 h1, #section3 h2, #section4 h1, #section4 h2 {
   text-align: center;
 }
-<<<<<<< HEAD
 @media screen and (min-width: 600px) {
   #section3 #gallery-1 figure, #section3 #gallery-2 figure, #section4 #gallery-1 figure, #section4 #gallery-2 figure {
     float: left;
     width: 33.33%;
-=======
-@media screen and (min-width: 1000px) {
-  #section3 #gallery-1, #section3 #gallery-2, #section4 #gallery-1, #section4 #gallery-2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.25em;
->>>>>>> thanya
   }
   #section3 #gallery-1 img, #section3 #gallery-2 img, #section4 #gallery-1 img, #section4 #gallery-2 img {
     max-height: 70vh;
     width: auto;
   }
-<<<<<<< HEAD
   @supports (display: grid) {
     #section3 #gallery-1, #section3 #gallery-2, #section4 #gallery-1, #section4 #gallery-2 {
       display: grid;
@@ -1738,45 +1472,30 @@ a:hover, a:active {
       width: 100%;
     }
   }
-=======
->>>>>>> thanya
 }
 
 .seperator {
   width: 100%;
   height: 10px;
-<<<<<<< HEAD
   border-bottom: 1px solid linear-gradient(to bottom right, #140a21, #000000);
   -moz-box-shadow: -5px 14px 12px black;
   -webkit-box-shadow: -5px 14px 12px black;
   box-shadow: -5px 14px 12px black;
-=======
-  -moz-box-shadow: 0px 14px 15px black;
-  -webkit-box-shadow: 0px 14px 15px black;
-  box-shadow: 0px 14px 15px black;
->>>>>>> thanya
   -ms-transform: skewY(4deg);
   -webkit-transform: skewY(4deg);
   transform: skewY(4deg);
   z-index: 99;
 }
 .seperator:nth-of-type(2) {
-<<<<<<< HEAD
   border-bottom: 1px solid linear-gradient(to bottom right, #140a21, #000000);
   -moz-box-shadow: -5px 14px 12px black;
   -webkit-box-shadow: -5px 14px 12px black;
   box-shadow: -5px 14px 12px black;
-=======
-  -moz-box-shadow: 0px 14px 15px black;
-  -webkit-box-shadow: 0px 14px 15px black;
-  box-shadow: 0px 14px 15px black;
->>>>>>> thanya
   -ms-transform: skewY(-4deg);
   -webkit-transform: skewY(-4deg);
   transform: skewY(-4deg);
   z-index: 99;
 }
-<<<<<<< HEAD
 
 /*--------------------------------------------------------------
 ## About page layouts
@@ -1895,8 +1614,6 @@ a:hover, a:active {
   text-align: center;
   padding: 0 5em 0 5em;
 }
-=======
->>>>>>> thanya
 
 @media screen and (min-width: 600px) {
   .banner-animation {
@@ -2022,453 +1739,6 @@ a:hover, a:active {
   display: block;
 }
 
-/*--------------------------------------------------------------
-## Community-layout
---------------------------------------------------------------*/
-/* community page*/
-.blogsection {
-  display: grid;
-  margin: 0 3%;
-  grid-template-columns: 1fr;
-<<<<<<< HEAD
-  margin-top: 1vh;
-  max-width: 1500px;
-}
-.blogsection:first-of-type {
-  margin-top: 3vh;
-}
-
-.blogsection article {
-  padding: 2vh;
-  background-color: white;
-  margin: 0;
-  border-radius: 5px;
-  margin-bottom: 3vh;
-  position: relative;
-}
-.blogsection article .entry-header h1, .blogsection article p {
-  color: black;
-}
-.blogsection article .entry-header h1 {
-  margin-top: 1vh;
-  font-size: 2em;
-}
-.blogsection article .entry-header h1 a {
-  text-decoration: none;
-  font-family: "Oswald", "times new roman", helvetica, sans-serif;
-  color: black;
-}
-.blogsection article .entry-content p {
-  height: 25vh;
-  font-size: 1.15em;
-}
-.blogsection article a {
-  padding: 0;
-  border: none;
-  color: #ca99ff;
-  font-weight: bold;
-}
-.blogsection article .entry-content {
-  width: auto;
-}
-.blogsection article footer {
-  background-color: #F0F0F0;
-  padding: 1em;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.blog .blog-entry {
-  min-height: 20vh;
-}
-.blog .blog-entry h1 {
-  text-align: center;
-  margin-top: 25vh;
-}
-
-.blog .site-main h2, .blog .site-main h3 {
-  margin: 0;
-  text-transform: uppercase;
-}
-.blog .site-main h2 {
-  font-size: 1.5em;
-}
-.blog .site-main h3 {
-  color: white;
-  font-size: 2.25em;
-}
-
-.blog .section-title {
-  grid-column: 1;
-  margin-bottom: 2vh;
-}
-
-#colophon {
-  margin: 2vh 3%;
-  padding: 0;
-}
-#colophon .entry-header, #colophon .entry-footer {
-  display: none;
-}
-#colophon .site-info {
-  margin-bottom: 2vh;
-}
-#colophon .site-info p {
-  margin: 0;
-}
-#colophon article {
-  grid-column: 1/3;
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.blog .cat-links, .blog .tags-links {
-  display: block;
-  color: black;
-  font-size: 1em;
-}
-.blog .comments-link, .blog .edit-link {
-  display: none;
-}
-
-@media screen and (min-width: 600px) {
-  .blogsection {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2vh;
-  }
-  .blogsection .section-title {
-    grid-column: 1/3;
-    margin-bottom: 0;
-  }
-  .blogsection article .entry-header h1 {
-    font-size: 1.5em;
-  }
-  .blogsection article .entry-content p {
-    height: 25vh;
-    font-size: 0.95em;
-  }
-
-  .blog .cat-links, .blog .tags-links {
-    font-size: 0.75em;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .blogsection {
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0 auto;
-    max-width: 1200px;
-  }
-  .blogsection .section-title {
-    grid-column: 1/4;
-  }
-  .blogsection article {
-    display: block;
-    min-height: 0;
-  }
-}
-/*--------------------------------------------------------------
-## Single-layout
---------------------------------------------------------------*/
-/* single page*/
-.single .seperator {
-  display: none;
-}
-
-.single article {
-  margin: 2em auto;
-  min-height: 0;
-  position: relative;
-}
-.single article .entry-content {
-  margin-top: 3em;
-}
-.single article .entry-header h1 {
-  position: absolute;
-  top: 250px;
-}
-
-.single .site-main article .post-thumbnail img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-  height: 300px;
-  object-fit: cover;
-}
-
-.single ol, .single ul {
-  padding-left: 1.5em;
-  font-size: 1.25em;
-}
-.single ol li, .single ul li {
-  list-style-type: square;
-}
-.single .comment-respond {
-  background-color: rgba(240, 240, 240, 0.25);
-  padding: 1em;
-  border-radius: 5px;
-}
-.single .comment-respond h3 {
-  margin-top: 0.25em;
-}
-
-.single article, .single .navigation, .single .comments-area {
-  padding: 0 4%;
-}
-.single article .entry-meta, .single .navigation .entry-meta, .single .comments-area .entry-meta {
-  margin-top: 0.5em;
-}
-.single article .entry-content, .single .navigation .entry-content, .single .comments-area .entry-content {
-  margin-top: 25em;
-  width: auto;
-}
-.single article .entry-content p, .single .navigation .entry-content p, .single .comments-area .entry-content p {
-  font-size: 1.25em;
-}
-.single article .entry-content blockquote, .single .navigation .entry-content blockquote, .single .comments-area .entry-content blockquote {
-  border-left: 2px solid white;
-  margin-left: 0.75em;
-}
-.single article .entry-content blockquote p, .single .navigation .entry-content blockquote p, .single .comments-area .entry-content blockquote p {
-  margin-left: 0.75em;
-}
-.single article a, .single .navigation a, .single .comments-area a {
-  border: none;
-}
-.single .comments-area {
-  margin-top: 1em;
-}
-.single .comments-area form p {
-  margin: 0.75em 0;
-}
-.single .comments-area form label, .single .comments-area input {
-  display: block;
-}
-.single .comments-area form [type=checkbox], .single .comments-area label[for=wp-comment-cookies-consent] {
-  display: inline;
-}
-.single .comments-area form input[type=text], .single .comments-area input[type=email], .single .comments-area input[type=url] {
-  width: 100%;
-}
-
-.single .entry-header {
-  margin-bottom: 1em;
-  padding-top: 1.75em;
-}
-.single .entry-header h1 {
-  margin: 0;
-=======
-  justify-content: center;
-}
-@media screen and (min-width: 600px) {
-  .half-layout {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    grid-gap: 0;
-  }
-  .half-layout .left-content {
-    justify-self: start;
-  }
-  .half-layout .right-content {
-    justify-self: end;
-  }
-}
-
-.third-layout {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-}
-.third-layout .title-header-small,
-.third-layout .title-header-big {
-  grid-column: 1/-1;
-}
-.third-layout .title-header-small {
-  align-self: end;
-}
-.third-layout .title-header-big {
-  align-self: start;
-}
-.third-layout .block {
-  text-align: left;
-}
-.third-layout .block img {
-  width: 100%;
-  object-fit: cover;
-}
-@media screen and (min-width: 600px) {
-  .third-layout {
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: none;
-    grid-gap: 0;
-  }
-  .third-layout .title-header-small,
-.third-layout .title-header-big {
-    justify-self: center;
-  }
-  .third-layout .block {
-    text-align: center;
-  }
-  .third-layout .block img {
-    width: 70%;
-  }
-  .third-layout .block p {
-    margin: 2em auto;
-    width: 70%;
-  }
-}
-
-.extend-third-layout {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-}
-.extend-third-layout .title-header-small,
-.extend-third-layout .title-header-big {
-  grid-column: 1/-1;
-}
-.extend-third-layout .title-header-small {
-  align-self: end;
-}
-.extend-third-layout .block img {
-  width: 100%;
-  height: auto;
-}
-.extend-third-layout .block-1, .extend-third-layout .block-2, .extend-third-layout .block-3 {
-  justify-self: center;
-}
-@media screen and (min-width: 600px) {
-  .extend-third-layout {
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: none;
-    grid-gap: 0;
-  }
-  .extend-third-layout .title-header-small,
-.extend-third-layout .title-header-big {
-    justify-self: center;
-  }
-  .extend-third-layout .block img {
-    max-height: 50vh;
-    width: auto;
-  }
-  .extend-third-layout .block-1 {
-    justify-self: end;
-  }
-  .extend-third-layout .block-2 {
-    justify-self: center;
-  }
-  .extend-third-layout .block-3 {
-    justify-self: start;
-  }
-}
-
-.front-cover p {
-  display: flex;
-  flex-wrap: wrap;
-}
-.front-cover p .radius-btn {
-  margin-top: 1em;
-}
-.front-cover p .radius-btn i {
-  transform: translateY(-1.2px);
-}
-
-.footer-layout .title-header-small,
-.footer-layout .title-header-big {
-  max-width: none;
-}
-.footer-layout .right-content {
-  justify-self: start;
-}
-
-.front-cover:first-of-type .left-content {
-  animation: float 5s ease-in-out infinite;
-  animation-timing-function: linear;
-}
-
-#earth {
-  animation: rotating 20s ease-in-out infinite;
-  animation-timing-function: linear;
->>>>>>> thanya
-}
-
-.single .cat-links, .single .tags-links {
-  display: block;
-  color: white;
-}
-.single .cat-links a, .single .tags-links a {
-  color: #ca99ff;
-}
-
-.single .edit-link {
-  display: none;
-}
-
-.single .nav-links {
-  margin-bottom: 2em;
-}
-.single .nav-previous, .single .nav-next {
-  width: 50%;
-  display: inline-block;
-}
-.single .nav-next {
-  text-align: right;
-}
-
-.single footer article {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-@media screen and (min-width: 600px) {
-  .single article {
-    display: block;
-    margin: 0 auto;
-    margin-top: 12em;
-    margin-bottom: 2em;
-  }
-  .single article .entry-content {
-    margin-top: 18em;
-  }
-  .single article .entry-header h1 {
-    top: 230px;
-  }
-  .single .navigation, .single .comments-area {
-    margin: 0 auto;
-  }
-  .single .cat-links, .single .tags-links {
-    display: inline-block;
-  }
-
-  .single .comment-respond {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .single .site-main {
-    display: grid;
-    grid-template-columns: 1fr 1300px 1fr;
-  }
-  .single .site-main article, .single .site-main .navigation, .single .site-main .comments-area {
-    grid-column: 2/3;
-  }
-  .single .site-main .navigation, .single .site-main .comments-area {
-    margin: 0;
-  }
-  .single .site-main article .post-thumbnail img {
-    position: absolute;
-  }
-}
 /*--------------------------------------------------------------
 ## Community-layout
 --------------------------------------------------------------*/
@@ -2850,7 +2120,6 @@ object {
   vertical-align: top;
   width: 100%;
 }
-<<<<<<< HEAD
 .gallery-item img {
   border-radius: 5px;
 }
@@ -2876,10 +2145,5 @@ object {
     display: none;
   }
 }
-=======
-.gallery-caption {
-  display: block;
-}
->>>>>>> thanya
 
 /*# sourceMappingURL=style.css.map */

@@ -214,7 +214,6 @@ function filter_ptags_on_images($content) {
 }
 add_filter('acf_the_content', 'filter_ptags_on_images');
 add_filter('the_content', 'filter_ptags_on_images');
-<<<<<<< HEAD
 
 //add svg support
 function add_file_types_to_uploads($file_types){
@@ -224,5 +223,3 @@ function add_file_types_to_uploads($file_types){
 	return $file_types;
 }
 add_action('upload_mimes', 'add_file_types_to_uploads');
-=======
->>>>>>> thanya

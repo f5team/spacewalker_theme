@@ -8,22 +8,14 @@
  */
 
 ?>
-<<<<<<< HEAD
         <?php
-=======
-        <?php 
->>>>>>> thanya
             if(is_front_page()):
                 ?> <article id="<?php the_title(); ?>" <?php post_class(); ?>> <?php
              else:
                 ?>  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <?php
             endif;
         ?>
-<<<<<<< HEAD
 
-=======
-       
->>>>>>> thanya
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
