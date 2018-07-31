@@ -1,6 +1,99 @@
 .page-template-page-about {
   .site-main {
     max-width: 1500px;
+    margin: auto;
+    padding-bottom: 4em;
+
+    .page-title {
+      text-align: center;
+    }
+  }
+  article {
+    .content-wrap {
+      text-align: center;
+      h1 , p{
+        margin: 0;
+      }
+    }
+    img {
+      object-fit: cover;
+    }
+  }
+
+
+  @media screen and (min-width: $size__medium-screen) {
+    .site-main {
+      display: grid;
+      grid-gap: 1.25em;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: auto;
+      align-items: start;
+      justify-content: center;
+
+
+      .page-title {
+        grid-column: 1 / -1;
+      }
+
+      article {
+        min-height: auto;
+        padding: 0;
+        margin: 0;
+
+        position: relative;
+
+        p {
+          color: white;
+        }
+
+        &:nth-of-type(1){
+          background-color: $color__main-blue;
+        }
+        &:nth-of-type(2){
+          background-color: $color__main-red;
+        }
+        &:nth-of-type(3){
+          background-color: $color__main-green;
+        }
+        &:nth-of-type(4){
+          background-color: $color__main-orange;
+        }
+        &:nth-of-type(5){
+          background-color: $color__main-purple;
+        }
+        &:nth-of-type(6){
+          background-color: $color__main-red;
+        }
+
+        .entry-content {
+          transform: translate(-50%,-50%);
+          transform: translateY(50%);
+          opacity: 0;
+          transition: all 1s;
+          position: absolute;
+          bottom: 40%;
+          left: 0%;
+        }
+
+        .post-thumbnail {
+          margin: 0;
+          opacity: 1;
+          -webkit-transition: .3s ease-in-out;
+          transition: .3s ease-in-out;
+        }
+
+        &:hover {
+          .entry-content {
+            transform: translateY(0%);
+            opacity: 1;
+            transition: all 1s;
+          }
+          .post-thumbnail {
+            opacity: 0;
+          }
+        }
+
+
 
 
     .page-title {
@@ -43,6 +136,126 @@
     }
   }
 
+      }
+    }
+  }
+
+  @media screen and (min-width: $size__large-screen) {
+    .site-main {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(90px,250px));
+
+      article {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        // &:nth-of-type(1) ,
+        // &:nth-of-type(1) img
+        // {
+        //   -webkit-clip-path: polygon(0 15%, 100% 10%, 100% 100%, 0 100%);
+        //   clip-path: polygon(0 15%, 100% 10%, 100% 100%, 0 100%);
+        // }
+        // &:nth-of-type(2) ,
+        // &:nth-of-type(2) img
+        // {
+        //   -webkit-clip-path: polygon(0 10%, 100% 5%, 100% 100%, 0 100%);
+        //   clip-path: polygon(0 10%, 100% 5%, 100% 100%, 0 100%);
+        // }
+        // &:nth-of-type(3) ,
+        // &:nth-of-type(3) img
+        // {
+        //   -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+        //   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+        // }
+
+        &:nth-of-type(4) ,
+        &:nth-of-type(4) img
+        {
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 85%);
+          clip-path: polygon(0 0, 100% 0, 100% 90%, 0 85%);
+        }
+        &:nth-of-type(5) ,
+        &:nth-of-type(5) img
+        {
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 90%);
+          clip-path: polygon(0 0, 100% 0, 100% 95%, 0 90%);
+        }
+        &:nth-of-type(6) ,
+        &:nth-of-type(6) img
+        {
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+        }
+      }
+    }
+  }
+}
+
+// Banner animation only for medium and large screen
+.banner-animation {
+  text-align: center;
+  padding: 0 5em 0 5em;
+}
+@media screen and (min-width:$size__medium-screen) {
+  .banner-animation {
+    max-width: 1500px;
+    margin-top: 4em;
+    padding: 0 5em 0em 5em;
+    grid-column: 1 / -1;
+    display: grid;
+    justify-content: center;
+
+    .first-line-animation {
+      align-self: end;
+    }
+    .second-line-animation {
+      align-self: start;
+    }
+  }
+  .first-line-animation ,
+  .second-line-animation {
+    text-align: center;
+  	text-transform: uppercase;
+    font-family: $font__title_nav;
+
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+
+
+  .second-line-animation {
+    width:0px;
+    animation: reveal 7s infinite;
+  }
+
+  .second-line-animation h1 {
+    font-family: $font__title_nav;
+
+    margin-left:-355px;
+    animation: slidein 7s infinite;
+  }
+
+  @keyframes showup {
+      0% {opacity:0;}
+      20% {opacity:1;}
+      80% {opacity:1;}
+      100% {opacity:0;}
+  }
+
+  @keyframes slidein {
+      0% { margin-left:-100vw; }
+      35% { margin-left:0px; }
+      70% { margin-left:0px; }
+      100% { margin-left:-100vw;; }
+  }
+
+  @keyframes reveal {
+      0% {opacity:0;width:0px;}
+      20% {opacity:1;width:0px;}
+      30% {width:100vw;}
+      80% {opacity:1;}
+      100% {opacity:0;width:30vw;margin: auto}
   @media screen and (min-width: $size__large-screen) {
     .site-main {
       display: grid;

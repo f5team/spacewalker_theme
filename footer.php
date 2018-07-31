@@ -14,34 +14,23 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<?php
-                    // NEW STUFF HERE
-                                    $footer_query = new WP_Query( array(
-                                            'category_name' => 'footer',
-                                            'post-per-page' => '1',
-                                        ) );
 
-                     // MODIFIED STUFF HERE
-                            if ( $footer_query->have_posts() ) :
+		<nav id="site-navigation" class="footer-navigation">
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'footer-menu',
+				'menu_id'        => 'footer-menu',
+			) );
+			?>
+		</nav><!-- #site-navigation -->
 
-                    // ADDITIONAL MODIFICATION HERE:
-                                /* Start the Loop */
-                                while ( $footer_query->have_posts() ) : $footer_query->the_post();
-                                    get_template_part( 'template-parts/content_footer', get_post_format() );
-                                endwhile;
-
-                    // ONE LAST ADDITION:
-                                            wp_reset_postdata();
-                            else :
-                                get_template_part( 'template-parts/content-footer', 'none' );
-                            endif;
-                ?>
 		<div class="site-info">
 			<!-- <a href="<?php echo esc_url( __( 'https://spacewalker.com/', 'spacewalker' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
 				printf( esc_html__( 'Proudly powered by %s', 'spacewalker' ), 'F5 Team.' );
 				?>
+			</a> -->
 			<p>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */

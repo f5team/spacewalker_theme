@@ -32,10 +32,11 @@
 
 
 @mixin divider-skew-left() {
+	border-bottom: 1px solid $color__background-body;
 
-  -moz-box-shadow:-5px 14px 15px black;
-  -webkit-box-shadow:-5px 14px 15px black;
-  box-shadow:-5px 14px 15px black;
+  -moz-box-shadow:-5px 14px 12px black;
+  -webkit-box-shadow:-5px 14px 12px black;
+  box-shadow:-5px 14px 12px black;
 
 
   -ms-transform: skewY(4deg);
@@ -46,9 +47,11 @@
 }
 
 @mixin divider-skew-right() {
-  -moz-box-shadow:-5px 14px 15px black;
-  -webkit-box-shadow:-5px 14px 15px black;
-  box-shadow:-5px 14px 15px black;
+	border-bottom: 1px solid $color__background-body;
+
+  -moz-box-shadow:-5px 14px 12px black;
+  -webkit-box-shadow:-5px 14px 12px black;
+  box-shadow:-5px 14px 12px black;
 
 
   -ms-transform: skewY(-4deg);
@@ -86,9 +89,13 @@
 	font-weight: bold;
 
   &:hover {
-		color: $color__link-hover;
+		color: $color__highlight-button;
     background: none;
     transition: all .5s;
+
+		a {
+			color: $color__highlight-button;
+		}
   }
 }
 
@@ -119,6 +126,18 @@
 		}
 		50% {
 				transform: rotate(10deg);
+		}
+    100%{
+				transform: rotate(0deg);
+		}
+}
+
+@keyframes rotateobjectinfinite {
+		0%{
+				transform: rotate(0deg);
+		}
+    100%{
+				transform: rotate(-360deg);
 		}
     100%{
 				transform: rotate(0deg);

@@ -59,7 +59,7 @@ big {
 }
 
 // Font Awesome
-a[href*='instagram']:before, a[href*='twitter']:before , a[href*='youtube']:before , a[href*='facebook']:before,
+a[href*='instagram']:before, a[href*='twitter']:before , a[href*='youtube']:before , a[href*='facebook']:before, a[href*='github']:before , a[href*='linkedin']:before , a[href*='pinterest']:before ,a[href*='google']:before ,
 a[href*='apple']:after , a[href*='android']:after
 {
   font-family: "Font Awesome 5 Brands";
@@ -93,6 +93,19 @@ a[href*='youtube']:before {
 a[href*='facebook']:before {
   content: "\f39e";
 }
+a[href*='github']:before {
+  content: "\f09b";
+}
+a[href*='linkedin']:before {
+  content: "\f0e1";
+}
+a[href*='pinterest']:before {
+  content: "\f231";
+}
+a[href*='google']:before {
+  content: "\f0d5";
+}
+
 a[href*='apple']:after {
   content: "\f179";
   padding-left: .7em;
