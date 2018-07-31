@@ -4,7 +4,11 @@
   article {
     // NOTE: max-width for the whole contain
     @include commonWidth();
+<<<<<<< HEAD
     // padding-top: 2em;
+=======
+    padding-top: 2em;
+>>>>>>> jeannguyen
 
     .post-thumbnail {
       text-align: center;
@@ -110,9 +114,14 @@
     img {
       max-width: 70%;
       height: auto;
+<<<<<<< HEAD
       animation: rotateobjectinfinite 10s ease-in-out;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
+=======
+      border-radius: 50%;
+      animation: pulseobject 2s infinite;
+>>>>>>> jeannguyen
     }
   }
 

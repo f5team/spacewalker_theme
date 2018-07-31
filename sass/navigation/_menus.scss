@@ -1,13 +1,19 @@
 // NOTE: HEADER Navigation styling
 .site-header {
+<<<<<<< HEAD
   width: 100vw;
   height: auto;
+=======
+  width: 100%;
+  height: 100px;
+>>>>>>> jeannguyen
   margin: auto;
   position: sticky;
   // background-color: $color__background-sticky-nav;
 
   // NOTE: fixed navigation
   z-index: 999;
+<<<<<<< HEAD
   position: sticky;
   top: 0;
   left: 0;
@@ -17,12 +23,26 @@
     clear: both;
     display: table;
   }
+=======
+  top: 0;
+  left: 0;
+
+	&::after {
+    content: "";
+    clear: both;
+    display: table;
+	}
+>>>>>>> jeannguyen
 
 }
 .wrapper-header {
   @include commonWidth();
   max-width: 1500px;
+<<<<<<< HEAD
   margin: 1.25em auto;
+=======
+  margin: 0 auto 1.25em auto;
+>>>>>>> jeannguyen
   padding-top: 1em;
   width: 100%;
   height: auto;
@@ -30,6 +50,7 @@
   transition: all .5;
   -webkit-transition: all .5s;
 
+<<<<<<< HEAD
   .site-branding {
     float: left;
   }
@@ -37,14 +58,20 @@
 
   .main-navigation {
     float:right;
+=======
+	.custom-logo-link, .site-title{
+		float: left;
+	}
 
+>>>>>>> jeannguyen
+
+  .main-navigation {
+		float: right;
     text-transform: uppercase;
 
     li {
-      display: inline-block;
-      padding: 0.5em;
-      margin-left: 1.5em;
-
+			display: inline-block;
+			padding: 0 0.5em;
     }
 
     a {
@@ -61,31 +88,42 @@
     font-weight: bold;
     text-transform: uppercase;
     color: $color__logo-tagline;
-    // flex-grow: 1;
-
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .custom-logo-link {
-      display: none;
-    }
 
     .site-title {
       margin-left: 1em;
     }
+
+<<<<<<< HEAD
+=======
+
   }
+>>>>>>> jeannguyen
+
+	@supports (display: flex){
+		.custom-logo-link, .site-title, .main-navigation{
+			float: none;
+		}
 
 
-  @media screen and (min-width: $size__medium-screen) {
+		&, .site-branding{
+			display: flex;
+		}
 
+		&{
+			// flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+		}
 
-    .site-branding {
-      .custom-logo-link {
-        display: inline-block;
-      }
-    }
-  }
+		.site-branding{
+			align-items: center;
+		}
+
+		.main-navigation{
+			justify-self: flex-end;
+		}
+	}
+
 
 }
 
@@ -94,11 +132,85 @@
   background-color: $color__background-sticky-nav;
   transition: all .5;
   -webkit-transition: all .5s;
+
 }
 
 #primary-menu li:last-of-type{
   @include highlight-btn();
 }
+
+<<<<<<< HEAD
+=======
+
+/* Small menu. */
+.menu-toggle,
+{
+	display: block;
+}
+
+.main-navigation.toggled ul {
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh + 100px);
+	opacity: 1;
+	transition: all 2s;
+
+}
+.main-navigation {
+  ul{
+		opacity: 0;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		text-align: right;
+		width: 100%;
+		height: 0;
+
+		position: absolute;
+		top: -100px;
+		right: 0;
+
+		transition: all 2s;
+
+  }
+
+	ul{
+		background: $color__background-sticky-nav;
+		transition: all .5;
+		-webkit-transition: all .5s;
+		z-index: -1;
+	}
+
+
+}
+>>>>>>> jeannguyen
+
+.menu-toggle{
+	align-self: flex-end;
+	z-index: 999;
+}
+
+@media screen and (min-width: 750px) {
+	.wrapper-header {
+		flex-direction: row;
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+		width: auto;
+		height: auto;
+
+		position: static;
+		opacity: 1;
+		background: none;
+	}
+
+}
+
 
 
 
@@ -147,7 +259,18 @@
     justify-content: space-between;
     align-items: center;
 
+<<<<<<< HEAD
     .footer-navigation{
+=======
+    #footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .post-thumbnail {
+        display: block;
+      }
+>>>>>>> jeannguyen
 
       li {
         display: inline-block;

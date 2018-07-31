@@ -12,11 +12,24 @@
  	<div id="primary" class="content-area">
  		<main id="main" class="site-main">
       <div class="banner-animation">
+<<<<<<< HEAD
         <h2 class="first-line-animation">Meet the team</h2>
         <div class="second-line-animation">
           <h1>We are so ready for new projects</h1>
         </div>
       </div>
+=======
+        <div class="first-line-animation">We are ...</div>
+        <div class="second-line-animation">
+          <span>so ready for new projects</span>
+        </div>
+      </div>
+
+      <div class="page-title">
+        <h2>Our passionate members</h2>
+        <h1>Meet the team</h1>
+      </div>
+>>>>>>> jeannguyen
 
       <?php
             $about_query = new WP_Query( array(
