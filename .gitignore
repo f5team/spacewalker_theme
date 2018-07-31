@@ -2,7 +2,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 style.css
 style.css.map
 .DS_Store
@@ -112,6 +111,7 @@ style.css.map
 >>>>>>> khanhdinh
 style.css
 style.css.map
+<<<<<<< HEAD
 =======
 sass/site/primary/_single-layout.scss
 style.css
@@ -137,3 +137,5 @@ template-parts/content_footer.php
 >>>>>>> parent of cf8d626... Reverse
 style.css
 style.css.map
+=======
+>>>>>>> parent of 08566c0... Merge branch 'thanya'
