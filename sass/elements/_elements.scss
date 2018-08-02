@@ -13,7 +13,12 @@ html {
 body {
 	background: $color__background-body;
 	background-blend-mode: hard-light !important;
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background: $color__background-body, url('images/bubble1.svg') no-repeat, url('images/bubble2.svg') no-repeat;
+	background-size: 100%, 100%, 100%, 50vw, 40vw;
+	background-position: 0,0,0, top 300px left 20px, top 100px right 50px;
+
+
+	/* Fallback for when there is no custom background color defined. */
 
 	margin: 0 auto;
 	// padding: 0 5em 0 5em;
