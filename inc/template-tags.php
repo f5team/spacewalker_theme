@@ -128,29 +128,7 @@ if ( ! function_exists( 'spacewalker_entry_footer' ) ) :
 
 				<div class="post-thumbnail">
 					<?php
-
-					if(is_front_page()):
-						$title = get_the_title( $post);
-						if($title == 'section1'):
-							?>
-							<div id="spaceship-wrapper">
-								<div id="path-wrapper">
-									<?php get_template_part( 'circle.svg' );
-									the_post_thumbnail();
-									?>
-								</div>
-								<div id="spaceship">
-									<img src="<?php echo get_template_directory_uri(); ?>/images/spaceship.png" alt="">
-								</div>
-							</div>
-							<?php
-						else:
-							the_post_thumbnail();
-						endif;
-
-					else:
 						the_post_thumbnail();
-					endif;
 					?>
 				</div><!-- .post-thumbnail -->
 
