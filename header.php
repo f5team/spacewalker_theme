@@ -62,11 +62,20 @@
 	<?php if(is_front_page() ): ?>
 	<div class="subMenu">
 		<div class="inner">
+			<a href="#section1" class="subNavBtn"><span>Intro</span></a>
+			<a href="#section2" class="subNavBtn"><span>Story</span></a>
+			<a href="#section3" class="subNavBtn"><span>Features</span></a>
+			<a href="#section4" class="subNavBtn end"><span>Screenshots</span></a>
+		</div>
+	</div>
+
+	<!-- <div class="subMenu">
+		<div class="inner">
 			<a href="#section1" class="subNavBtn">Section 1</a>
 			<a href="#section2" class="subNavBtn">Section 2</a>
 			<a href="#section3" class="subNavBtn">Section 3</a>
 			<a href="#section4" class="subNavBtn">Section 4</a>
 		</div>
-	</div>
+	</div> -->
 <?php endif;?>
 	<div id="content" class="site-content">

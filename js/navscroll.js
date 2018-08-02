@@ -2,7 +2,6 @@ jQuery(document).ready(function ($) {
 	$('.subMenu').smint({
 		'scrollSpeed' : 1000
 	});
-
   $(document).scroll(function () {
     var $nav = $(".site-header");
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());

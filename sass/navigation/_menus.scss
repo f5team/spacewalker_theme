@@ -154,6 +154,50 @@
 	z-index: 999;
 }
 
+// subMenu
+.subMenu{
+	position: fixed !important;
+	top: 40% !important;
+	left: 2em !important;
+
+	& a{
+		margin: 20px 0;
+		display: flex;
+		align-items: center;
+	}
+	& a:before{
+		content: '';
+		display: block;
+		width: 15px;
+		height: 15px;
+
+		margin: 6px;
+
+		border-radius: 50%;
+
+		border: 2px solid white;
+	}
+
+	& a span{
+		display: none;
+		color: white;
+		margin-left: 10px;
+		line-height: 1em;
+
+		background: rgba(255,255,255, 0.5);
+		padding: 5px 20px;
+		border-radius: 5px;
+	}
+
+	& .active:before{
+		background: white;
+	}
+
+	& a:hover span{
+		display: block;
+	}
+}
+
 @media screen and (min-width: 750px) {
 	.wrapper-header {
 		flex-direction: row;
