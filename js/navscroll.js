@@ -1,4 +1,8 @@
 jQuery(document).ready(function ($) {
+	$('.subMenu').smint({
+		'scrollSpeed' : 1000
+	});
+
   $(document).scroll(function () {
     var $nav = $(".site-header");
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
@@ -7,10 +11,6 @@ jQuery(document).ready(function ($) {
 	$(".menu-toggle").on("click", function(){
 		$(this).toggleClass("menu-toggle-cross");
 	});
-
-	// if($(ellipse).length != 0){
-		// $('svg').css('background', 'red');
-	// }
 
 	var path = anime.path('#path');
 

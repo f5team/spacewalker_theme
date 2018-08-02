@@ -1,5 +1,4 @@
 .site-content {
-  padding-bottom: 2em;
 
   article {
     // NOTE: max-width for the whole contain
@@ -84,7 +83,7 @@
   	animation: floatobject 3s ease-in-out infinite;
     animation-timing-function: linear;
 
-    img {
+    &>img {
     	animation: rotateobject 15s ease-in-out infinite;
       animation-timing-function: linear;
     }
@@ -162,5 +161,8 @@
 
   &:nth-of-type(2) {
     @include divider-skew-right();
+  }
+  &:last-of-type {
+    display: none;
   }
 }

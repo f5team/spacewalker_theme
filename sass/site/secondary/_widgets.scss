@@ -1,6 +1,4 @@
 .widget {
-	margin: 0 0 1.5em;
-
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
@@ -9,9 +7,17 @@
 
 
 // NOTE: aside - widget style
+.wrapper-widget {
+	width: 100vw;
+	background: $color__main-purple-dark;
+	margin: 0;
+	padding: 0;
+}
 .widget-area {
   @include commonWidth();
   text-align: center;
+	margin-bottom: 0;
+	padding-bottom: 2em;
 
   section , .sidebar-social{
 
@@ -41,6 +47,9 @@
   .nf-field-container {
     margin-bottom: 1em;
   }
+	.ninja-forms-field {
+		text-align: center;
+	}
 
   //NOTE: styling contact form in footer
 
@@ -68,6 +77,10 @@
         padding: 1em 1em 0 0;
       }
     }
+
+		.ninja-forms-field {
+			text-align: left;
+		}
 
   }
 

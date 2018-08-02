@@ -10,7 +10,9 @@
 ?>
         <?php
             if(is_front_page()):
-                ?> <article id="<?php the_title(); ?>" <?php post_class(); ?>> <?php
+                ?>
+                <section class="<?php the_title(); ?>">
+                  <article id="<?php the_title(); ?>" <?php post_class(); ?>> <?php
              else:
                 ?>  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <?php
             endif;
@@ -45,19 +47,6 @@
 	<div class="entry-content">
 		<?php
 		if(is_front_page()):
-				$title = get_the_title( $post);
-				if($title == 'section1'):
-					?>
-					<div id="spaceship-wrapper">
-							<div id="path-wrapper">
-								<?php get_template_part( 'circle.svg' ); ?>
-							</div>
-							<div id="spaceship">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/spaceship.png" alt="">
-							</div>
-					</div>
-					<?php
-				endif;
 			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
@@ -106,4 +95,11 @@
                 ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+
 <div class ="seperator"></div>
+
+<?php
+  if(is_front_page()):
+    ?>
+  </section>
+<?php endif; ?>
