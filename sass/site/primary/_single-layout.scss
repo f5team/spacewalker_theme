@@ -4,12 +4,10 @@
 	display: none;
 }
 
-
 .single article{
 	margin: 2em auto;
 	min-height: 0;
 	position: relative;
-
 
 	& .entry-content {
 	margin-top: 3em;
@@ -18,7 +16,8 @@
 	& .entry-header{
 		& h1{
 			position: absolute;
-			top: 250px;
+			top: 245px;
+			padding-right: .4em;
 		}
 	}
 
@@ -30,7 +29,7 @@
 		top: 0;
 		width: 100%;
 		z-index: -1;
-		height: 300px;
+		height: 320px;
 		object-fit: cover;
 
 	}
@@ -39,6 +38,7 @@
 	& ol,ul {
 		padding-left: 1.5em;
 		font-size: 1.25em;
+		margin: 2em 0;
 
 	& li {
 	list-style-type: square;
@@ -48,10 +48,13 @@
 		background-color: rgba(#F0F0F0,0.25);
 		padding: 1em;
 		border-radius: 5px;
+		color: #e0c4ff;
 
 
 		& h3{
 			margin-top: .25em;
+			font-family: $font__main;
+			font-weight: bold;
 		}
 	}
 
@@ -59,24 +62,34 @@
 
 
 .single {
-		& article,.navigation,.comments-area {
+		& article,.nav-links,.comments-area {
 		padding: 0 4%;
 
 	& .entry-meta {
 		margin-top: .5em;
+		position: absolute;
+		top: 270px;
+		padding-right: 1em;
+		}
 	}
 
 	& .entry-content{
-		margin-top: 25em;
+		margin-top: 22em;
 		width: auto;
 
 			& p{
 				font-size: 1.25em;
+				margin-top: 2em;
 			}
 
 			& blockquote{
 				border-left: 2px solid white;
 				margin-left: .75em;
+				font-size: 1.35em;
+				font-weight: bold;
+				font-style: italic;
+				margin-top: 3em;
+				margin-bottom: 3em;
 
 				& p {
 					margin-left: .75em;
@@ -87,13 +100,20 @@
 	& a{
 		border: none;
 	}
-}
+
+	& a:hover{
+		transition: none;
+		background: none;
+	}
+
 
 	& .comments-area{
 		margin-top: 1em;
 
 		& form p{
 			margin: .75em 0;
+			font-weight: bold;
+			color: #e0c4ff;
 		}
 
 		& form label,input{
@@ -104,8 +124,20 @@
 			display: inline;
 		}
 
+		& form [type="checkbox"]{
+			margin-right: .45em;
+		}
+
 		& form input[type="text"], input[type="email"], input[type="url"]{
 			width: 100%;
+		}
+
+		& form input[type="submit"]{
+			font-size: 1.15rem;
+			padding: .75em 1em;
+			margin-top: 1.5em;
+			font-family: $font__main;
+			font-weight: bold;
 		}
 
 		}
@@ -118,8 +150,10 @@
 
 	& h1{
 		margin: 0;
+		padding: 0;
 	}
 }
+
 
 .single {
 		& .cat-links, .tags-links{
@@ -139,11 +173,13 @@
 .single {
 	& .nav-links{
 		margin-bottom: 2em;
+
 	}
 
-	& .nav-previous,.nav-next{
-		width: 50%;
+	& .nav-previous, .nav-next{
+		width: 49%;
 		display: inline-block;
+
 	}
 
 	& .nav-next{
@@ -163,21 +199,28 @@
 		& article{
 			display: block;
 			margin: 0 auto;
-			margin-top: 12em;
+			margin-top: 5em;
 			margin-bottom: 2em;
 
 		& .entry-content{
-			margin-top: 18em;
+			margin-top: 16em;
 		}
 
 		& .entry-header{
 			& h1{
-				top: 230px;
+				top: 220px;
+				padding-right: 1em;
 			}
+
+		& .entry-meta{
+			top: 270px;
+		}
+
+
 	}
 }
 
-		& .navigation, .comments-area{
+		& .comments-area{
 			margin: 0 auto;
 		}
 
@@ -190,9 +233,12 @@
 		padding-left: 2em;
 		padding-right: 2em;
 	}
+}
 
-
-
+@media screen and (min-width: 1000px){
+	.site-content article{
+		min-height: 0;
+	}
 }
 
 
@@ -202,19 +248,34 @@
 		display: grid;
 		grid-template-columns: 1fr 1300px 1fr;
 
-		& article, .navigation, .comments-area{
-			grid-column: 2/3;
-
+		& article, .nav-links, .comments-area{
+			grid-column: 1/4;
 		}
 
-		& .navigation, .comments-area{
-			margin: 0;
-		}
+		& article{
+			max-width: none;
+			padding: 0 10%;
+			margin-top: 0;
 
-		& article .post-thumbnail img{
+			&	.post-thumbnail img{
 			position: absolute;
+			height: 360px;
+			}
+
+			& .entry-header h1{
+				top: 260px;
+				padding-right: .5em;
+			}
+
+			& .entry-content{
+				margin-top: 18em;
+			}
 		}
 
+		& .nav-links, .comments-area{
+			margin: 0 0 2em 0;
+			padding: 0 10%;
+		}
 
 }
 
