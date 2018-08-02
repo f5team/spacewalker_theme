@@ -45,7 +45,9 @@ if ( ! function_exists( 'spacewalker_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary-menu' => esc_html__( 'Primary', 'spacewalker' ),
-			'social-menu' => esc_html__( 'Social', 'spacewalker' )
+			'social-menu' => esc_html__( 'Social', 'spacewalker' ),
+			'footer-menu' => esc_html__( 'Footer', 'spacewalker' ),
+			'social-sidebar-menu' => esc_html__( 'Social Sidebar', 'spacewalker' )
 		) );
 
 		/*
@@ -134,6 +136,13 @@ function spacewalker_scripts() {
 
 	wp_enqueue_script( 'spacewalker-navscroll', get_template_directory_uri() . '/js/navscroll.js', array('jquery'), '20151215', true );
 
+	wp_enqueue_script( 'spacewalker-smint', get_template_directory_uri() . '/js/jquery.smint.js', array('jquery'), '20151215', true );
+
+	// if(is_front_page()):
+	// wp_enqueue_script( 'spacewalker-anime', get_template_directory_uri() . '/js/anime.min.js', array('jquery'), '20151215', true );
+	// endif;
+
+
 	wp_enqueue_script( 'spacewalker-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 
@@ -211,3 +220,12 @@ function filter_ptags_on_images($content) {
 }
 add_filter('acf_the_content', 'filter_ptags_on_images');
 add_filter('the_content', 'filter_ptags_on_images');
+
+//add svg support
+function add_file_types_to_uploads($file_types){
+	$new_filetypes = array();
+	$new_filetypes['svg'] = 'image/svg+xml';
+	$file_types = array_merge($file_types, $new_filetypes );
+	return $file_types;
+}
+add_action('upload_mimes', 'add_file_types_to_uploads');
