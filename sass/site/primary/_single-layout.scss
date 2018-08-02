@@ -1,5 +1,9 @@
 /* single page*/
 
+.single article a{
+	border: none;
+}
+
 .single .seperator{
 	display: none;
 }
@@ -10,7 +14,7 @@
 	position: relative;
 
 	& .entry-content {
-	margin-top: 3em;
+	margin-top: 27em;
 	}
 
 	& .entry-header{
@@ -68,8 +72,11 @@
 	& .entry-meta {
 		margin-top: .5em;
 		position: absolute;
-		top: 270px;
+		top: 280px;
 		padding-right: 1em;
+		& span{
+		color: white;
+		}
 		}
 	}
 
@@ -203,7 +210,7 @@
 			margin-bottom: 2em;
 
 		& .entry-content{
-			margin-top: 16em;
+			margin-top: 20em;
 		}
 
 		& .entry-header{
@@ -212,10 +219,9 @@
 				padding-right: 1em;
 			}
 
-		& .entry-meta{
+		& .entry-meta {
 			top: 270px;
 		}
-
 
 	}
 }
@@ -267,8 +273,12 @@
 				padding-right: .5em;
 			}
 
+			& .entry-meta{
+				top: 310px;
+			}
+
 			& .entry-content{
-				margin-top: 18em;
+				margin-top: 22em;
 			}
 		}
 
