@@ -1185,25 +1185,6 @@ a:hover, a:active {
   }
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
-.main-navigation ul {
-  display: none;
-}
-
-@media screen and (min-width: 600px) {
-  .menu-toggle {
-    display: none;
-  }
-
-  .main-navigation ul {
-    display: block;
-  }
-}
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -2034,6 +2015,9 @@ section:last-of-type .seperator, section:nth-last-of-type(2) .seperator {
   font-size: 1.25em;
   margin-top: 2em;
 }
+.single .entry-content p span {
+  color: white;
+}
 .single .entry-content blockquote {
   border-left: 2px solid white;
   margin-left: 0.75em;
@@ -2163,7 +2147,7 @@ section:last-of-type .seperator, section:nth-last-of-type(2) .seperator {
   .single .site-main article {
     max-width: none;
     padding: 0 10%;
-    margin-top: 0;
+    margin-top: -100px;
   }
   .single .site-main article .post-thumbnail img {
     position: absolute;

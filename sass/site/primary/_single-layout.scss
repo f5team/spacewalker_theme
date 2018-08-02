@@ -87,6 +87,10 @@
 			& p{
 				font-size: 1.25em;
 				margin-top: 2em;
+
+				& span{
+				color: white;
+				}
 			}
 
 			& blockquote{
@@ -261,7 +265,7 @@
 		& article{
 			max-width: none;
 			padding: 0 10%;
-			margin-top: 0;
+			margin-top: -100px;
 
 			&	.post-thumbnail img{
 			position: absolute;
@@ -279,6 +283,7 @@
 
 			& .entry-content{
 				margin-top: 22em;
+
 			}
 		}
 
