@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<?php 
+		<?php
                     // NEW STUFF HERE
                                     $footer_query = new WP_Query( array(
                                             'category_name' => 'footer',
@@ -34,7 +34,7 @@
                                             wp_reset_postdata();
                             else :
                                 get_template_part( 'template-parts/content_footer', 'none' );
-                            endif; 
+                            endif;
                 ?>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://spacewalker.com/', 'spacewalker' ) ); ?>">
@@ -57,7 +57,7 @@
 			wp_nav_menu( array(
 				'theme_location' => 'social-menu',
 				'menu_id'        => 'social-menu',
-				'link_before'		 => '<span class="screen-reader-text"',
+				'link_before'		 => '<span class="screen-reader-text">',
 				'link_after'		 => '</span>',
 				'container'			 => '',
 			) );
