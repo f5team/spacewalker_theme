@@ -48,10 +48,13 @@
 		background-color: rgba(#F0F0F0,0.25);
 		padding: 1em;
 		border-radius: 5px;
+		color: #e0c4ff;
 
 
 		& h3{
 			margin-top: .25em;
+			font-family: $font__main;
+			font-weight: bold;
 		}
 	}
 
@@ -105,6 +108,8 @@
 
 		& form p{
 			margin: .75em 0;
+			font-weight: bold;
+			color: #e0c4ff;
 		}
 
 		& form label,input{
@@ -115,9 +120,22 @@
 			display: inline;
 		}
 
+		& form [type="checkbox"]{
+			margin-right: .45em;
+		}
+
 		& form input[type="text"], input[type="email"], input[type="url"]{
 			width: 100%;
 		}
+
+		& form input[type="submit"]{
+			font-size: 1.15rem;
+			padding: .75em 1em;
+			margin-top: 1.5em;
+			font-family: $font__main;
+			font-weight: bold;
+		}
+
 
 		}
 	}
