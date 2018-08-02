@@ -20,6 +20,11 @@
 	margin-bottom: 3vh;
 	position: relative;
 
+	& img {
+	height: 300px;
+	object-fit: cover;
+	}
+
 	& .entry-header h1{
 		margin-top: 1vh;
 		font-size: 2em;
@@ -168,7 +173,8 @@
 
 		& .section-title{
 				grid-column: 1/4;
-			}
+				margin-top: 5vh;
+		}
 
 		& article{
 			display: block;
@@ -191,6 +197,8 @@
 	.blog .blogsection{
 	& article img{
 		transition: transform .25s;
+		height: 220px;
+
 	}
 
 	& article:hover img{
@@ -206,6 +214,7 @@
 
 		& h1{
 			padding-left: .25em;
+			padding-right: .25em;
 		}
 
 		& .entry-header h1 a{
