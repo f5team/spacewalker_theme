@@ -65,7 +65,8 @@
 			<a href="#section1" class="subNavBtn"><span>Intro</span></a>
 			<a href="#section2" class="subNavBtn"><span>Story</span></a>
 			<a href="#section3" class="subNavBtn"><span>Features</span></a>
-			<a href="#section4" class="subNavBtn end"><span>Screenshots</span></a>
+			<a href="#section4" class="subNavBtn"><span>Screenshots</span></a>
+			<a href="#section5" class="subNavBtn end screen-reader-text"><span>Footer</span></a>
 		</div>
 	</div>
 

@@ -1,7 +1,10 @@
 jQuery(document).ready(function ($) {
+	//submenu for section scroll
 	$('.subMenu').smint({
 		'scrollSpeed' : 1000
 	});
+
+	//stickyheader
   $(document).scroll(function () {
     var $nav = $(".site-header");
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
@@ -11,16 +14,20 @@ jQuery(document).ready(function ($) {
 		$(this).toggleClass("menu-toggle-cross");
 	});
 
-	var path = anime.path('#path');
+	//anime
+		if($('.home')[0]){
+			var path = anime.path('#path');
 
-	var motionPath = anime({
-	  targets: '#spaceship',
-	  translateX: path('x'),
-	  translateY: path('y'),
-	  rotate: path('angle'),
-	  easing: 'linear',
-	  duration: 10000,
-	  loop: true
-	});
+			var motionPath = anime({
+				targets: '#spaceship',
+				translateX: path('x'),
+				translateY: path('y'),
+				rotate: path('angle'),
+				easing: 'linear',
+				duration: 10000,
+				loop: true
+			});
+		}
+
 
 });

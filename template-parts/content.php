@@ -12,6 +12,7 @@
             if(is_front_page()):
                 ?>
                 <section class="<?php the_title(); ?>">
+									<div class="inner ">
                   <article id="<?php the_title(); ?>" <?php post_class(); ?>> <?php
              else:
                 ?>  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <?php
@@ -96,10 +97,18 @@
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
-<div class ="seperator"></div>
+<?php
+						if (is_front_page()):
+							?>
+							<div class ="seperator"></div>
+
+							<?php
+						endif;
+						?>
 
 <?php
   if(is_front_page()):
     ?>
+	</div>
   </section>
 <?php endif; ?>

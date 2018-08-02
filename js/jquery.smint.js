@@ -130,6 +130,8 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				// isnt long enough to scroll to the top of the page and trigger the active state.
 
 				if($(window).scrollTop() + $(window).height() == $(document).height()) {
+					console.log($(window).scrollTop());
+
 	       			smintA.removeClass('active')
 	       			$(".smint a:not('.extLink'):last").addClass('active')
 

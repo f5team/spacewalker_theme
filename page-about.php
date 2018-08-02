@@ -41,7 +41,6 @@
       ?>
 
  		</main><!-- #main -->
-    <div class ="seperator"></div>
 
  	</div><!-- #primary -->
 

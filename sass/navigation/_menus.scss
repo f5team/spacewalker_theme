@@ -40,8 +40,12 @@
 
     li {
 			display: inline-block;
-			padding: 0 0.5em;
+			padding: 0 1em;
     }
+
+		.current-menu-item a{
+			color: $color__text-body;
+		}
 
     a {
       line-height: 3em;
@@ -165,6 +169,7 @@
 		display: flex;
 		align-items: center;
 	}
+
 	& a:before{
 		content: '';
 		display: block;
@@ -177,6 +182,10 @@
 
 		border: 2px solid white;
 	}
+	//
+	// & a:last-of-type:before{
+	// 	display: none;
+	// }
 
 	& a span{
 		display: none;
