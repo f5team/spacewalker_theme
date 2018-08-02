@@ -15,19 +15,19 @@ jQuery(document).ready(function ($) {
 	});
 
 	//anime
-		if($('.home')[0]){
-			var path = anime.path('#path');
-
-			var motionPath = anime({
-				targets: '#spaceship',
-				translateX: path('x'),
-				translateY: path('y'),
-				rotate: path('angle'),
-				easing: 'linear',
-				duration: 10000,
-				loop: true
-			});
-		}
+		// if($('.home')[0]){
+		// 	var path = anime.path('#path');
+		//
+		// 	var motionPath = anime({
+		// 		targets: '#spaceship',
+		// 		translateX: path('x'),
+		// 		translateY: path('y'),
+		// 		rotate: path('angle'),
+		// 		easing: 'linear',
+		// 		duration: 10000,
+		// 		loop: true
+		// 	});
+		// }
 
 
 });
