@@ -30,7 +30,7 @@
           a {
             font-family: $font__title_nav;
             font-weight: bold;
-            color: $color__main-purple;
+            color: $color__text-body;
             @include font-size(1.7);
             padding: 0;
             margin: 0;
@@ -46,7 +46,9 @@
           padding: 0;
           border: none;
           img {
-            object-fit: cover;
+						@supports (object-fit: cover){
+							object-fit: cover;
+						}
           }
         }
 

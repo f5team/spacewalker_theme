@@ -40,7 +40,6 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 
 
 
-
 		if ( settings.scrollSpeed ) {
 				var scrollSpeed = settings.scrollSpeed
 			}
@@ -78,17 +77,17 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				var scrollTop = $(window).scrollTop()+myOffset;
 
 				// if we scroll more than the navigation, change its position to fixed and add class 'fxd', otherwise change it back to absolute and remove the class
-				if (scrollTop > stickyTop+myOffset) {
-					smint.css({ 'position': 'fixed', 'top':0,'left':0 }).addClass('fxd');
-
-					// add padding to the body to make up for the loss in heigt when the menu goes to a fixed position.
-					// When an item is fixed, its removed from the flow so its height doesnt impact the other items on the page
-					$('body').css('padding-top', menuHeight );
-				} else {
-					smint.css( 'position', 'relative').removeClass('fxd');
-					//remove the padding we added.
-					$('body').css('padding-top', '0' );
-				}
+				// if (scrollTop > stickyTop+myOffset) {
+				// 	smint.css({ 'position': 'fixed', 'top':0,'left':0 }).addClass('fxd');
+				//
+				// 	// add padding to the body to make up for the loss in heigt when the menu goes to a fixed position.
+				// 	// When an item is fixed, its removed from the flow so its height doesnt impact the other items on the page
+				// 	$('body').css('padding-top', menuHeight );
+				// } else {
+				// 	smint.css( 'position', 'relative').removeClass('fxd');
+				// 	//remove the padding we added.
+				// 	$('body').css('padding-top', '0' );
+				// }
 
 				// Check if the position is inside then change the menu
 				// Courtesy of Ryan Clarke (@clarkieryan)
@@ -154,7 +153,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 
 
 
-				var goTo =  $(mySelector+'.'+ hash).offset().top-myOffset;
+				var goTo =  $(mySelector+'.'+ hash).offset().top;
 
 				// Scroll the page to the desired position!
 				$("html, body").stop().animate({ scrollTop: goTo }, scrollSpeed);
