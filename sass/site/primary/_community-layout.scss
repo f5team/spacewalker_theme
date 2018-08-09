@@ -64,7 +64,7 @@
 		& a{
 			text-decoration: none;
 			font-family: "Oswald", "times new roman", helvetica, sans-serif;
-			color: black;
+			color: $color__text-main;
 
 		}
 	}
@@ -72,7 +72,7 @@
 	& .entry-content p{
 		font-size: 1.15em;
 		margin-bottom: 8vh;
-		color: black;
+		color: $color__text-main;
 	}
 
 	& a{
@@ -130,7 +130,7 @@
 .blog {
 	& .cat-links, .tags-links{
 		display: block;
-		color: black;
+		color: $color__text-main;
 	}
 	& .comments-link,.edit-link{
 		display: none;
@@ -180,21 +180,22 @@
 	}
 
 	.blog .blogsection{
+		@supports (filter: grayscale(100%)){
+			article img{
+				-webkit-filter: grayscale(100%);
+				filter: grayscale(100%);
+				-webkit-transition: .3s ease-in-out;
+				transition: .3s ease-in-out;
+			}
+			article:hover img{
+				-webkit-filter: grayscale(0);
+				filter: grayscale(0);
 
-		& article img{
-			-webkit-filter: grayscale(100%);
-			filter: grayscale(100%);
-			-webkit-transition: .3s ease-in-out;
-			transition: .3s ease-in-out;
-
-			height: 220px;
-
+			}
 		}
 
-		& article:hover img{
-			-webkit-filter: grayscale(0);
-			filter: grayscale(0);
-
+		article img{
+			height: 220px;
 		}
 
 		& article {
