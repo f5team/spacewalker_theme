@@ -811,6 +811,30 @@ a {
     outline: 0;
     transition: all 1s; }
 
+a.button {
+  background-color: #f74354;
+  border: 1px solid #f74354;
+  transition: all .5s;
+  border-radius: 5px;
+  padding: .2em 1.5em;
+  font-weight: bold;
+  background-color: #14b5f4;
+  border: 1px solid #14b5f4;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Montserrat", times, sans-serif; }
+  a.button:hover {
+    color: #f74354;
+    background: none;
+    transition: all .5s; }
+    a.button:hover a {
+      color: #f74354; }
+  a.button:hover {
+    color: #14b5f4;
+    border-radius: 5px;
+    border: 1px solid #14b5f4; }
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -1301,6 +1325,25 @@ section:last-of-type .seperator, section:nth-last-of-type(2) .seperator {
     animation: floatobject 3s ease-in-out infinite;
     animation-timing-function: linear; }
 
+.error404 .error-404 {
+  margin: 3em auto;
+  padding: 0 5em 0 5em;
+  text-align: center; }
+  .error404 .error-404 .button-nav {
+    padding: 3em 0 2em 0; }
+  .error404 .error-404 .page-content p {
+    margin: auto;
+    font-size: 16px;
+    font-size: 1rem; }
+  @media screen and (min-width: 1000px) {
+    .error404 .error-404 header img {
+      max-width: 50vw;
+      object-fit: cover; }
+    .error404 .error-404 .page-content p {
+      max-width: 50%;
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
 /*--------------------------------------------------------------
 ## About page layouts
 --------------------------------------------------------------*/
@@ -1478,6 +1521,101 @@ section:last-of-type .seperator, section:nth-last-of-type(2) .seperator {
       opacity: 0;
       width: 30vw;
       margin: auto; } } }
+/*--------------------------------------------------------------
+## Archives
+--------------------------------------------------------------*/
+.archive .site-content .page-title,
+.category .site-content .page-title {
+  text-align: center; }
+.archive .site-content .archive-wrapper,
+.category .site-content .archive-wrapper {
+  margin: 2em auto;
+  max-width: 1500px;
+  margin: auto; }
+  .archive .site-content .archive-wrapper:after,
+  .category .site-content .archive-wrapper:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .archive .site-content .archive-wrapper article,
+  .category .site-content .archive-wrapper article {
+    background: #f1f1f1;
+    margin: 0 auto;
+    overflow: hidden;
+    color: #0d0617;
+    padding: 1em;
+    margin-bottom: 2em;
+    min-height: auto;
+    border-radius: 5px; }
+    .archive .site-content .archive-wrapper article .entry-title a,
+    .category .site-content .archive-wrapper article .entry-title a {
+      font-family: "Oswald", "times new roman", helvetica, sans-serif;
+      font-weight: bold;
+      color: #411d70;
+      font-size: 27.2px;
+      font-size: 1.7rem;
+      padding: 0;
+      margin: 0;
+      border: none; }
+    .archive .site-content .archive-wrapper article .post-thumbnail,
+    .category .site-content .archive-wrapper article .post-thumbnail {
+      width: 100%;
+      padding: 0;
+      border: none; }
+      .archive .site-content .archive-wrapper article .post-thumbnail img,
+      .category .site-content .archive-wrapper article .post-thumbnail img {
+        object-fit: cover; }
+    .archive .site-content .archive-wrapper article p,
+    .category .site-content .archive-wrapper article p {
+      color: #0d0617; }
+    .archive .site-content .archive-wrapper article .entry-footer a,
+    .category .site-content .archive-wrapper article .entry-footer a {
+      color: #27e2b6;
+      padding: 0;
+      margin: 0;
+      border: none;
+      text-transform: lowercase; }
+      .archive .site-content .archive-wrapper article .entry-footer a:hover,
+      .category .site-content .archive-wrapper article .entry-footer a:hover {
+        color: #14b5f4; }
+  @media screen and (min-width: 600px) {
+    .archive .site-content .archive-wrapper article,
+    .category .site-content .archive-wrapper article {
+      float: left;
+      width: 48%;
+      margin-left: 1%;
+      margin-right: 1%;
+      display: block;
+      margin-bottom: 1em; }
+    @supports (display: grid) {
+      .archive .site-content .archive-wrapper,
+      .category .site-content .archive-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+        grid-gap: 1em; }
+        .archive .site-content .archive-wrapper .page-header,
+        .category .site-content .archive-wrapper .page-header {
+          grid-column: 1 / -1; }
+        .archive .site-content .archive-wrapper article,
+        .category .site-content .archive-wrapper article {
+          width: 100%; } } }
+  @media screen and (min-width: 1000px) {
+    .archive .site-content .archive-wrapper,
+    .category .site-content .archive-wrapper {
+      margin: 3em auto;
+      padding: 0 5em 0 5em; }
+      .archive .site-content .archive-wrapper article,
+      .category .site-content .archive-wrapper article {
+        width: 31%; }
+      @supports (display: grid) {
+        .archive .site-content .archive-wrapper,
+        .category .site-content .archive-wrapper {
+          grid-template-columns: repeat(3, 1fr); }
+          .archive .site-content .archive-wrapper article,
+          .category .site-content .archive-wrapper article {
+            width: 100%; } } }
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

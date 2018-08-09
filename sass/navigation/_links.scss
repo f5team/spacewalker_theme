@@ -22,3 +22,19 @@ a {
 		transition: all 1s;
 	}
 }
+a.button
+{
+	@include highlight-btn();
+	background-color: $color__main-blue;
+	border: 1px solid $color__main-blue;
+	padding: 1em 2em;
+	text-transform: uppercase;
+	color: white;
+	font-family: $font__main;
+
+	&:hover {
+		color: $color__main-blue;
+		border-radius: 5px;
+		border: 1px solid $color__main-blue;
+	}
+}
