@@ -32,7 +32,8 @@ button {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"]{
+input[type="submit"],
+{
 	@include highlight-btn();
 	background-color: $color__main-blue;
 	border: 1px solid $color__main-blue;

@@ -27,6 +27,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 				) );
 				?>
 			</nav><!-- #site-navigation -->
+			<h2>Get awesome newsletters</h2>
 			<?php echo do_shortcode(" [ninja_form id=2] "); ?>
 		</div>
 	</aside><!-- #secondary -->

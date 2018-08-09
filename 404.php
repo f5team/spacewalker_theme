@@ -15,13 +15,17 @@ get_header();
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'spacewalker' ); ?></h1>
+					<!-- <h1 class="page-title"><?php esc_html_e( '404', 'spacewalker' ); ?></h1> -->
+					<img src="<?php bloginfo('template_url')?>/images/404-banner.png" alt="404 error" class="404-banner">
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'spacewalker' ); ?></p>
+					<p><?php esc_html_e( 'It looks like you enter an unknown galaxy. Don&rsquo;t worry though, we will bring you home.', 'spacewalker' ); ?></p>
+					<div class="button-nav">
+						<a href="<?php echo get_home_url() ?>" class="button">Back home</a>
+					</div>
 
-					<?php
+					<!-- <?php
 					get_search_form();
 
 					the_widget( 'WP_Widget_Recent_Posts' );
@@ -40,15 +44,14 @@ get_header();
 							) );
 							?>
 						</ul>
-					</div><!-- .widget -->
+					</div> -->
 
-					<?php
-					/* translators: %1$s: smiley */
+					<!-- <?php
 					$spacewalker_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'spacewalker' ), convert_smilies( ':)' ) ) . '</p>';
 					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$spacewalker_archive_content" );
 
 					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+					?> -->
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
@@ -57,4 +60,5 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
+get_sidebar();
 get_footer();

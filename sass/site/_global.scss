@@ -205,3 +205,39 @@ section:last-of-type .seperator, section:nth-last-of-type(2) .seperator{
     animation-timing-function: linear;
   }
 }
+
+.error404 {
+  .error-404 {
+    @include commonWidth();
+    text-align: center;
+
+    .button-nav {
+      padding: 3em 0 2em 0;
+    }
+
+    .page-content {
+      p {
+        margin: auto;
+        @include font-size(1);
+      }
+    }
+
+    @media screen and (min-width: $size__large-screen) {
+      header{
+
+        img {
+          max-width: 50vw;
+          object-fit: cover;
+        }
+      }
+
+      .page-content {
+        p {
+          max-width: 50%;
+          @include font-size(1.5);
+        }
+      }
+
+    }
+  }
+}
