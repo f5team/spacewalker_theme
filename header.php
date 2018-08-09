@@ -60,7 +60,7 @@
 
 	</header><!-- #masthead -->
 	<?php if(is_front_page() ): ?>
-	<div class="subMenu">
+	<!-- <div class="subMenu">
 		<div class="inner">
 			<a href="#section1" class="subNavBtn"><span>Intro</span></a>
 			<a href="#section2" class="subNavBtn"><span>Story</span></a>
@@ -68,7 +68,7 @@
 			<a href="#section4" class="subNavBtn"><span>Screenshots</span></a>
 			<a href="#section5" class="subNavBtn end screen-reader-text"><span>Footer</span></a>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- <div class="subMenu">
 		<div class="inner">

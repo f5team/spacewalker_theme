@@ -21,9 +21,13 @@ get_header();
 <!-- Blog Loop -->
 
 			<header>
+				
 
-				<div class="blog-entry">
-						<h1>text</h1>
+				<div class="banner-animation">
+					<h2 class="first-line-animation">Welcome to our community</h2>
+					<div class="second-line-animation">
+						<h1>Share your stories with us</h1>
+					</div>
 				</div>
 
 			</header>

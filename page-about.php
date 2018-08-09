@@ -11,6 +11,12 @@
 
  	<div id="primary" class="content-area">
  		<main id="main" class="site-main">
+      
+      <div class="banner-cover">
+        <img src="<?php bloginfo('template_url')?>/images/banner-layer1.png" alt="mobile" class="layer1">
+        <img src="<?php bloginfo('template_url')?>/images/banner-layer2.png" alt="bubble" class="layer2">
+      </div>
+
       <div class="banner-animation">
         <h2 class="first-line-animation">Meet the team</h2>
         <div class="second-line-animation">

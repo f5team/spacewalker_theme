@@ -1,8 +1,8 @@
 jQuery(document).ready(function ($) {
 	//submenu for section scroll
-	$('.subMenu').smint({
-		'scrollSpeed' : 1000
-	});
+	// $('.subMenu').smint({
+	// 	'scrollSpeed' : 1000
+	// });
 
 	//stickyheader
   $(document).scroll(function () {
