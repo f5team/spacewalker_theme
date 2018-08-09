@@ -1546,7 +1546,8 @@ section:last-of-type .seperator, section:nth-last-of-type(2) .seperator {
     padding: 1em;
     margin-bottom: 2em;
     min-height: auto;
-    border-radius: 5px; }
+    border-radius: 5px;
+    height: 100%; }
     .archive .site-content .archive-wrapper article .entry-title a,
     .category .site-content .archive-wrapper article .entry-title a {
       font-family: "Oswald", "times new roman", helvetica, sans-serif;
@@ -1651,13 +1652,29 @@ section:last-of-type .seperator, section:nth-last-of-type(2) .seperator {
 --------------------------------------------------------------*/
 /* community page*/
 .blogsection {
-  display: grid;
-  margin: 0 3%;
-  grid-template-columns: 1fr;
-  margin-top: 1vh;
   max-width: 1500px; }
-  .blogsection:first-of-type {
-    margin-top: 3vh; }
+  .blogsection article {
+    width: 30%;
+    float: left; }
+  .blogsection .section-title {
+    clear: both;
+    padding: 50px 0 10px 10px; }
+  .blogsection .wrapper-widget, .blogsection .widget-area {
+    clear: both; }
+  @supports (display: grid) {
+    .blogsection {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-gap: 20px;
+      padding: 0 5em; }
+      .blogsection .section-title {
+        grid-column: 1/-1; }
+      .blogsection article {
+        width: 100%;
+        float: none !important; }
+      @media screen and (min-width: 1000px) {
+        .blogsection article {
+          min-height: auto !important; } } }
 
 .blogsection article {
   padding: 2vh;
@@ -1667,19 +1684,21 @@ section:last-of-type .seperator, section:nth-last-of-type(2) .seperator {
   margin-bottom: 3vh;
   position: relative; }
   .blogsection article img {
-    height: 300px;
-    object-fit: cover; }
+    height: 300px; }
+    @supports (object-fit: cover) {
+      .blogsection article img {
+        object-fit: cover; } }
   .blogsection article .entry-header h1 {
     margin-top: 1vh;
     font-size: 2em; }
     .blogsection article .entry-header h1 a {
       text-decoration: none;
       font-family: "Oswald", "times new roman", helvetica, sans-serif;
-      color: black; }
+      color: #404040; }
   .blogsection article .entry-content p {
     font-size: 1.15em;
     margin-bottom: 8vh;
-    color: black; }
+    color: #404040; }
   .blogsection article a {
     padding: 0;
     border: none;
@@ -1712,136 +1731,118 @@ section:last-of-type .seperator, section:nth-last-of-type(2) .seperator {
   color: white;
   font-size: 2.25em; }
 
-.blog .section-title {
-  grid-column: 1;
-  margin-bottom: 2vh; }
-
 .blog .cat-links, .blog .tags-links {
   display: block;
-  color: black; }
+  color: #404040; }
 .blog .comments-link, .blog .edit-link {
   display: none; }
 
 @media screen and (min-width: 600px) {
-  .blogsection {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3vh; }
-    .blogsection article {
-      display: block; }
-    .blogsection .section-title {
-      grid-column: 1/3;
-      margin-bottom: 0; }
-    .blogsection article .entry-header h1 {
-      font-size: 1.5em; }
-    .blogsection article .entry-content p {
-      font-size: .95em; }
+  .blogsection article {
+    display: block; }
+  .blogsection .section-title {
+    margin-bottom: 0; }
+  .blogsection article .entry-header h1 {
+    font-size: 1.5em; }
+  .blogsection article .entry-content p {
+    font-size: .95em; }
 
   .blog .cat-links, .blog .tags-links {
     font-size: .8em; } }
-@media screen and (min-width: 1300px) {
-  .blogsection {
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0 auto;
-    max-width: 1200px; }
-    .blogsection .section-title {
-      grid-column: 1/4;
-      margin-top: 5vh; }
-    .blogsection article {
-      display: block;
-      min-height: 0; } }
 @media screen and (min-width: 1300px) {
   .site-content .blogsection article a:hover {
     transition: none;
     background: none; }
 
+  @supports (filter: grayscale(100%)) {
+    .blog .blogsection article img {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out; }
+    .blog .blogsection article:hover img {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0); } }
   .blog .blogsection article img {
-    transition: transform .25s;
     height: 220px; }
-  .blog .blogsection article:hover img {
-    transform: scale(1.02);
-    box-shadow: 2px 2px 5px; }
-  .blog .blogsection article .entry-header {
-    position: relative; }
-  .blog .blogsection article h1 {
-    padding-left: .25em;
-    padding-right: .25em; }
-  .blog .blogsection article .entry-header h1 a {
-    color: #ca99ff; }
-  .blog .blogsection article .entry-title {
-    bottom: 0;
-    position: absolute; }
-  .blog .blogsection article .entry-content p {
-    margin-top: 1.25em;
-    transition: 1s; }
-  .blog .blogsection article:hover .entry-title a {
-    color: #FFF;
-    font-size: 1.05em; }
-  .blog .blogsection article:hover .entry-content p {
-    margin-top: .5em;
-    transition: 0.5s; } }
+  .blog .blogsection article {
+    cursor: pointer; }
+    .blog .blogsection article .entry-header {
+      position: relative; }
+    .blog .blogsection article .entry-header h1 a {
+      color: #ca99ff; }
+    .blog .blogsection article .entry-content p {
+      margin-top: 1.25em;
+      transition: 1s; } }
 /*--------------------------------------------------------------
 ## Single-layout
 --------------------------------------------------------------*/
 /* single page*/
-.single article a {
-  border: none; }
-
-.single .seperator {
-  display: none; }
-
-.single article {
-  margin: 2em auto;
-  min-height: 0;
-  position: relative; }
-  .single article .entry-content {
-    margin-top: 27em; }
-  .single article .entry-header h1 {
-    position: absolute;
-    top: 245px;
-    padding-right: .4em; }
-
-.single .site-main article .post-thumbnail img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-  height: 320px;
-  object-fit: cover; }
-
-.single #content ol, .single #content ul {
-  padding-left: 1.5em;
-  font-size: 1.25em;
-  margin: 2em 0; }
-  .single #content ol li, .single #content ul li {
-    list-style-type: square; }
-.single #content .comment-respond {
-  background-color: rgba(240, 240, 240, 0.25);
-  padding: 1em;
-  border-radius: 5px;
-  color: #e0c4ff; }
-  .single #content .comment-respond h3 {
+.single {
+  background: white; }
+  .single .site-main {
+    margin-top: -100px; }
+  .single .post-thumbnail img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; }
+  .single article:not(.comment-body) {
+    display: block;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    max-width: 1000px;
+    min-height: auto;
+    margin: -100px auto 0 auto;
+    padding-bottom: 1em;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    position: relative;
+    background: white; }
+  .single .comment-body {
+    display: block;
+    min-height: auto;
+    padding: 0; }
+  .single article a {
+    border: none;
+    color: #27e2b6;
+    padding: 0; }
+  .single .seperator {
+    display: none; }
+  .single .site-main ol, .single .site-main ul {
+    padding-left: 3em;
+    margin: 2em 0; }
+    .single .site-main ol li, .single .site-main ul li {
+      list-style-type: square;
+      color: #404040; }
+  .single .nav-links, .single .comments-area {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    max-width: 1000px;
+    margin: 0 auto; }
+    .single .nav-links .entry-meta, .single .comments-area .entry-meta {
+      margin-top: .5em;
+      padding-right: 1em; }
+  .single .comments-area {
+    border-bottom: 1px solid #ccc;
+    padding: 2em 5em 4em 5em;
+    margin-top: -10px; }
+  .single textarea {
+    border: 1px solid #ccc;
+    color: #404040; }
+  .single .nav-links {
+    padding: 2em 5em 0 5em;
+    margin-top: -10px; }
+  .single h1 {
+    color: #0d0617; }
+  .single h3 {
     margin-top: .25em;
     font-family: "Montserrat", times, sans-serif;
     font-weight: bold; }
 
-.single article, .single .nav-links, .single .comments-area {
-  padding: 0 4%; }
-  .single article .entry-meta, .single .nav-links .entry-meta, .single .comments-area .entry-meta {
-    margin-top: .5em;
-    position: absolute;
-    top: 280px;
-    padding-right: 1em; }
-    .single article .entry-meta span, .single .nav-links .entry-meta span, .single .comments-area .entry-meta span {
-      color: white; }
 .single .entry-content {
-  margin-top: 22em;
   width: auto; }
   .single .entry-content p {
-    font-size: 1.25em;
-    margin-top: 2em; }
-    .single .entry-content p span {
-      color: white; }
+    color: #404040; }
   .single .entry-content blockquote {
     border-left: 2px solid white;
     margin-left: .75em;
@@ -1857,102 +1858,43 @@ section:last-of-type .seperator, section:nth-last-of-type(2) .seperator {
 .single a:hover {
   transition: none;
   background: none; }
-.single .comments-area {
-  margin-top: 1em; }
-  .single .comments-area form p {
-    margin: .75em 0;
-    font-weight: bold;
-    color: #e0c4ff; }
-  .single .comments-area form label, .single .comments-area input {
-    display: block; }
-  .single .comments-area form [type="checkbox"], .single .comments-area label[for="wp-comment-cookies-consent"] {
-    display: inline; }
-  .single .comments-area form [type="checkbox"] {
-    margin-right: .45em; }
-  .single .comments-area form input[type="text"], .single .comments-area input[type="email"], .single .comments-area input[type="url"] {
-    width: 100%; }
-  .single .comments-area form input[type="submit"] {
-    font-size: 1.15rem;
-    padding: .75em 1em;
-    margin-top: 1.5em;
-    font-family: "Montserrat", times, sans-serif;
-    font-weight: bold; }
-
-.single .entry-header {
-  margin-bottom: 1em;
-  padding-top: 1.75em; }
-  .single .entry-header h1 {
-    margin: 0;
-    padding: 0; }
+.single .comments-area form p {
+  margin: .75em 0;
+  font-weight: bold;
+  color: #e0c4ff; }
+.single .comments-area form label, .single .comments-area input {
+  display: block; }
+.single .comments-area form [type="checkbox"], .single .comments-area label[for="wp-comment-cookies-consent"] {
+  display: inline; }
+.single .comments-area form [type="checkbox"] {
+  margin-right: .45em; }
+.single .comments-area form input[type="text"], .single .comments-area input[type="email"], .single .comments-area input[type="url"] {
+  width: 100%; }
+.single .comments-area form input[type="submit"] {
+  font-size: 1.15rem;
+  padding: .75em 1em;
+  margin-top: 1.5em;
+  font-family: "Montserrat", times, sans-serif;
+  font-weight: bold; }
 
 .single .cat-links, .single .tags-links {
-  display: block;
-  color: white; }
+  display: block; }
   .single .cat-links a, .single .tags-links a {
     color: #ca99ff; }
 
 .single .edit-link {
   display: none; }
 
-.single .nav-links {
-  margin-bottom: 2em; }
 .single .nav-previous, .single .nav-next {
-  width: 49%;
   display: inline-block; }
 .single .nav-next {
-  text-align: right; }
+  text-align: right;
+  float: right; }
 
 .single footer article {
   margin-top: 2em;
   margin-bottom: 2em; }
 
-@media screen and (min-width: 600px) {
-  .single article {
-    display: block;
-    margin: 0 auto;
-    margin-top: 5em;
-    margin-bottom: 2em; }
-    .single article .entry-content {
-      margin-top: 20em; }
-    .single article .entry-header h1 {
-      top: 220px;
-      padding-right: 1em; }
-    .single article .entry-header .entry-meta {
-      top: 270px; }
-  .single .comments-area {
-    margin: 0 auto; }
-  .single .cat-links, .single .tags-links {
-    display: inline-block; }
-
-  .single .comment-respond {
-    padding-left: 2em;
-    padding-right: 2em; } }
-@media screen and (min-width: 1000px) {
-  .single .site-content article {
-    min-height: 0; } }
-@media screen and (min-width: 1300px) {
-  .single .site-main {
-    display: grid;
-    grid-template-columns: 1fr 1300px 1fr; }
-    .single .site-main article, .single .site-main .nav-links, .single .site-main .comments-area {
-      grid-column: 1/4; }
-    .single .site-main article {
-      max-width: none;
-      padding: 0 10%;
-      margin-top: -100px; }
-      .single .site-main article .post-thumbnail img {
-        position: absolute;
-        height: 360px; }
-      .single .site-main article .entry-header h1 {
-        top: 260px;
-        padding-right: .5em; }
-      .single .site-main article .entry-meta {
-        top: 310px; }
-      .single .site-main article .entry-content {
-        margin-top: 22em; }
-    .single .site-main .nav-links, .single .site-main .comments-area {
-      margin: 0 0 2em 0;
-      padding: 0 10%; } }
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

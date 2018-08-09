@@ -33,7 +33,7 @@
 			float: none !important;
 		}
 
-		@media screen and (min-width: 1000px){
+		@media screen and (min-width: $size__large-screen){
 			article{
 				min-height: auto !important;
 			}
