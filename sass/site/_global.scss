@@ -132,6 +132,12 @@
   @media screen and (min-width: $size__medium-screen) {
     #gallery-1 , #gallery-2{
 
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
       figure {
         float: left;
         width: 33.33%;
@@ -151,7 +157,6 @@
           float: none;
           width: 100%;
         }
-
       }
     }
   }

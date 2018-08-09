@@ -35,21 +35,29 @@
 
   @media screen and (min-width: $size__medium-screen) {
     .site-main {
-      @include commonWidth();
-      max-width: 1500px;
+
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      &:after {
+        clear: both;
+      }
 
       .page-title {
         width: 100%;
       }
 
-      article {
-        float: left;
+      article{
         min-height: auto;
-        padding: 0;
-        margin: 0;
+        padding: 0 1% 0 1%;
+        margin: 1em auto;
+        width: 48%;
+        float: left;
 
         position: relative;
-
         p {
           color: white;
         }
@@ -66,18 +74,28 @@
         .page-title {
           grid-column: 1 / -1;
         }
+
+        article {
+          width: 100%;
+          float: none;
+        }
       }
     }
   }
 
   @media screen and (min-width: $size__large-screen) {
     .site-main {
-      display: grid;
-      grid-template-columns: repeat(3,minmax(90px,250px));
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
 
       article {
-        display: grid;
-        grid-template-columns: 1fr;
+        width: 33.33%;
+        float: left;
+        padding: 0;
+        margin: 2em auto;
 
         .entry-content {
           transform: translate(-50%,-50%);
@@ -134,7 +152,15 @@
             color: $color__main-purple;
           }
         }
+      }
 
+      @supports (display: grid) {
+        display: grid;
+        grid-template-columns: repeat(3,minmax(90px,250px));
+            article {
+              width: 100%;
+              float: none;
+            }
       }
     }
   }
